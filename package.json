@@ -1,0 +1,19 @@
+{
+  "name": "ssf2x",
+  "version": "1.0.0",
+  "description": "Repo for the SSF2X.com website (in progress)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/covarrubiasseb/ssf2x.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/covarrubiasseb/ssf2x/issues"
+  },
+  "homepage": "https://github.com/covarrubiasseb/ssf2x#readme"
+}
