@@ -1,10 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import MatchData from './MatchData.json';
+import eloRating from './elo.js';
 
 function createRankings(matchData) {
-  return [];
-}
+  // go through matchData and use eloRating to get ratings
+  
+
+  return [{
+    name: "ultracombo",
+    "score": 3000
+  }];
+};
 
 let rankings = createRankings(MatchData);
 
@@ -16,7 +23,13 @@ function App() {
         <div id="rankingTable">
           <h1>Super Street Fighter II X Rankings</h1>
           <ol>
-            <li key="0">Unstyled Table</li>
+            {
+              rankings.map((player, idx) => {
+                return (
+                  <li key={idx}>{player.name} : {player.score}</li>
+                );
+              })
+            }
           </ol>
         </div>
       </header>
