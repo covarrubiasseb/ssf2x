@@ -1,5 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import MatchData from './MatchData.json';
+
+function createRankings(matchData) {
+  return [];
+}
+
+let rankings = createRankings(MatchData);
 
 function App() {
   return (

@@ -1,0 +1,371 @@
+{
+  "players": {
+    "0": "Kotaka Shoten",
+    "1": "Aniken",
+    "2": "Ito",
+    "3": "Kurahashi",
+    "4": "Yuuvega",
+    "5": "Fujimon",
+    "6": "Shogatsu",
+    "7": "Murasaki",
+    "8": "Noguchi",
+    "9": "Cloiwan",
+    "10": "SEO",
+    "11": "AFO",
+    "12": "Hide",
+    "13": "Kaneko",
+    "14": "Tsumura",
+    "15": "Shiro",
+    "16": "Stomach Momio",
+    "17": "Piroshi",
+    "18": "Sakamoto",
+    "19": "Bunchin",
+    "20": "Otoko",
+    "21": "Haku",
+    "22": "Choshu",
+    "23": "Yoshio",
+    "24": "Nakanishi",
+    "25": "Mattsun",
+    "26": "Suzuka",
+    "27": "Tsuji",
+    "28": "Tomoza",
+    "29": "Shal",
+    "30": "Nemo",
+    "31": "Takosama",
+    "32": "hyperbeginner",
+    "33": "ultracombo",
+    "34": "haruki",
+    "35": "Kabukikun",
+    "36": "TFO",
+    "37": "Raul",
+    "38": "Miya",
+    "39": "Derelor",
+    "40": "Orf",
+    "41": "Tencho",
+    "42": "Kaosflare",
+    "43": "Haijin",
+    "44": "Yuzuru",
+    "45": "afro legends",
+    "46": "Kenshiro",
+    "47": "Kyouju",
+    "48": "Jyai",
+    "49": "Kote",
+    "50": "Shu",
+    "51": "Munari",
+    "52": "Kawamata",
+    "53": "Suzuki",
+    "54": "Kusa",
+    "55": "riz0ne",
+    "56": "Nikaiten"
+  },
+
+  "characters": {
+    "0": "Ryu",
+    "1": "Ken",
+    "2": "Honda",
+    "3": "Chun Li",
+    "4": "Blanka",
+    "5": "Zangief",
+    "6": "Guile",
+    "7": "Dhalsim",
+    "8": "T.Hawk",
+    "9": "Cammy",
+    "10": "Fei Long",
+    "11": "Dee Jay",
+    "12": "Boxer",
+    "13": "Claw",
+    "14": "Sagat",
+    "15": "Dictator",
+    "16": "S Ryu",
+    "17": "S Ken",
+    "18": "S Honda",
+    "19": "S Chun Li",
+    "20": "S Blanka",
+    "21": "S Zangief",
+    "22": "S GS uile",
+    "23": "S Dhalsim",
+    "24": "S T.Hawk",
+    "25": "S Cammy",
+    "26": "S Fei Long",
+    "27": "S Dee Jay",
+    "28": "S Boxer",
+    "29": "S Claw",
+    "30": "S Sagat",
+    "31": "S Dictator"
+  },
+
+  "sets": {
+    "0": {
+      "link": "https://www.youtube.com/watch?v=DDRrNgWuaTU",
+      "players": ["0", "1"],
+      "characters": ["6", "1"],
+      "score": [10, 1]
+    },
+
+    "1": {
+      "link": "https://www.youtube.com/watch?v=bzIxIEKjwcw",
+      "players": ["0", "2"],
+      "characters": ["6", "11"],
+      "score": [10, 6]
+    },
+
+    "2": {
+      "link": "https://www.youtube.com/watch?v=_VVihGa03xY",
+      "players": ["0", "3"],
+      "characters": ["6", "0"],
+      "score": [15, 4]
+    },
+
+    "3": {
+      "link": "https://www.youtube.com/watch?v=1i8itFG-kOA",
+      "players": ["0", "4"],
+      "characters": ["6", "15"],
+      "score": [2, 3]
+    },
+
+    "4": {
+      "link": "https://www.youtube.com/watch?v=1v1lygzf5Yg",
+      "players": ["0", "5"],
+      "characters": ["6", "11"],
+      "score": [10, 9]
+    },
+
+    "5": {
+      "link": "https://www.youtube.com/watch?v=5QzgnnkxuTM",
+      "players": ["4", "6"],
+      "characters": ["15", "18"],
+      "score": [10, 6] 
+    },
+
+    "6": {
+      "link": "https://www.youtube.com/watch?v=VOuUovZyIuw",
+      "players": ["7", "8"],
+      "characters": ["15", "13"],
+      "score": [10, 4]
+    },
+
+    "7": {
+      "link": "https://www.youtube.com/watch?v=Bm5FHwkWuh0",
+      "players": ["9", "10"],
+      "characters": ["2", "3"],
+      "score": [10, 1]
+    },
+
+    "8": {
+      "link": "https://www.youtube.com/watch?v=eenPVf5V8Lw",
+      "players": ["11", "13"],
+      "characters": ["4", "6"],
+      "score": [10, 8]
+    },
+
+    "9": {
+      "link": "https://www.youtube.com/watch?v=MbuvSDOBm0g",
+      "players": ["12", "14"],
+      "characters": ["3", "8"],
+      "score": [10, 2]
+    },
+
+    "10": {
+      "link": "https://www.youtube.com/watch?v=zyc1zNz8dZ4",
+      "players": ["15", "16"],
+      "characters": ["0", "5"],
+      "score": [10, 7]
+    },
+
+    "11": {
+      "link": "https://www.youtube.com/watch?v=e6p4M7PNYQg",
+      "players": ["17", "18"],
+      "characters": ["2", "14"],
+      "score": [10, 6]
+    },
+
+    "12": {
+      "link": "https://www.youtube.com/watch?v=JGwW7AZ1-UQ",
+      "players": ["19", "20"],
+      "characters": ["10", "12"],
+      "score": [10, 0]
+    },
+
+    "13": {
+      "link": "https://www.youtube.com/watch?v=LCQeT1Y7XOA",
+      "players": ["21", "22"],
+      "characters": ["9", "1"],
+      "score": [5, 10]
+    },
+
+    "14": {
+      "link": "https://www.youtube.com/watch?v=722CYbJSPEQ",
+      "players": ["23", "24"],
+      "characters": ["6", "0"],
+      "score": [9, 10]
+    },
+
+    "15": {
+      "link": "https://www.youtube.com/watch?v=r3TZvFkxIPo&t=20442s",
+      "players": ["25", "26"],
+      "characters": ["1", "7"],
+      "score": [10, 9]
+    },
+
+    "16": {
+      "link": "https://www.youtube.com/watch?v=Hw96WsF1TIM",
+      "players": ["4", "27"],
+      "characters": ["15", "12"],
+      "score": [10, 5]
+    },
+
+    "17": {
+      "link": "https://www.youtube.com/watch?v=K1ADpjgeT64",
+      "players": ["28, 29"],
+      "characters": ["15", "12"],
+      "score": [6, 10]
+    },
+
+    "18": {
+      "link": "https://www.youtube.com/watch?v=qEXCO_eDT8w",
+      "players": ["30", "18"],
+      "characters": ["4", "14"],
+      "score": [10, 9]
+    },
+
+    "19": {
+      "link": "https://www.youtube.com/watch?v=ww2lgKMI-w4",
+      "players": ["27", "31"],
+      "characters": ["12", "5"],
+      "score": [10, 8]
+    },
+
+    "20": {
+      "link": "https://www.youtube.com/watch?v=5gR3aahWS_o",
+      "players": ["32", "34"],
+      "characters": ["12", "30"],
+      "score": [10, 0]
+    },
+
+    "21": {
+      "link": "https://www.youtube.com/watch?v=Nqd-mIfRz0o",
+      "players": ["26", "35"],
+      "characters": ["7", "12"],
+      "score": [10, 0]
+    },
+
+    "22": {
+      "link": "https://www.youtube.com/watch?v=DS1_CQLLRio",
+      "players": ["36", "37"],
+      "characters": ["10", "0"],
+      "score": [6, 10]
+    },
+
+    "23": {
+      "link": "https://www.youtube.com/watch?v=VXdyhTddFCU",
+      "players": ["38", "39"],
+      "characters": ["1", "0"],
+      "score": [10, 5]
+    },
+
+    "24": {
+      "link": "https://www.youtube.com/watch?v=BtOMcLRvI2Y",
+      "players": ["13", "25"],
+      "characters": ["6", "1"],
+      "score": [9, 10]
+    },
+
+    "25": {
+      "link": "https://www.youtube.com/watch?v=I_UHRyq0NLc",
+      "players": ["0", "40"],
+      "characters": ["6", "0"],
+      "score": [10, 4]
+    },
+
+    "26": {
+      "link": "https://www.youtube.com/watch?v=fq9Sm6MyB5E",
+      "players": ["41", "42"],
+      "characters": ["0", "6"],
+      "score": [10, 4]
+    },
+
+    "27": {
+      "link": "https://www.youtube.com/watch?v=iJR--TnbkQE",
+      "players": ["43", "44"],
+      "characters": ["0", "11"],
+      "score": [10, 7]
+    },
+
+    "28": {
+      "link": "https://www.youtube.com/watch?v=vIa7OyQLLYQ",
+      "players": ["45", "46"],
+      "characters": ["11", "12"],
+      "score": [1, 10]
+    },
+
+    "29": {
+      "link": "https://www.youtube.com/watch?v=o9ykhx7hxt8",
+      "players": ["21", "47"],
+      "characters": ["9", "7"],
+      "score": [10, 6]
+    },
+
+    "30": {
+      "link": "https://www.youtube.com/watch?v=G_WMECjgk-8",
+      "players": ["4", "9"],
+      "characters": ["15", "2"],
+      "score": [10, 1]
+    },
+
+    "31": {
+      "link": "https://www.youtube.com/watch?v=hlmdsm1ScEs",
+      "players": ["35", "16"],
+      "characters": ["12", "5"],
+      "score": [6, 10]
+    },
+
+    "32": {
+      "link": "https://www.youtube.com/watch?v=f4Y8LS_jdro",
+      "players": ["17", "48"],
+      "characters": ["2", "7"],
+      "score": [3, 10]
+    },
+
+    "33": {
+      "link": "https://www.youtube.com/watch?v=BwwI7qIBDhE",
+      "players": ["11", "13"],
+      "characters": ["4", "6"],
+      "score": [10, 3]
+    },
+
+    "34": {
+      "link": "https://www.youtube.com/watch?v=ORWv8NVakNo",
+      "players": ["3", "49"],
+      "characters": ["6", "14"],
+      "score": [10, 1]
+    },
+
+    "35": {
+      "link": "https://www.youtube.com/watch?v=eqDhqhtyXVs",
+      "players": ["50", "51"],
+      "characters": ["1", "14"],
+      "score": [4, 10]
+    }, 
+
+    "36": {
+      "link": "https://www.youtube.com/watch?v=zVdOUaEZxog",
+      "players": ["3", "12"],
+      "characters": ["0", "3"],
+      "score": [10, 3]
+    },
+
+    "37": {
+      "link": "https://www.youtube.com/watch?v=OqcjF_O83IM",
+      "players": ["52", "53"],
+      "characters": ["0", "5"],
+      "score": [10, 6]
+    },
+
+    "38": {
+      "link": "https://www.youtube.com/watch?v=AYflmMjPMts",
+      "players": ["54", "56"],
+      "characters": ["3", "12"],
+      "score": [10, 3]
+    }     
+  }
+}
