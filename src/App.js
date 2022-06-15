@@ -1,7 +1,6 @@
 import logo from './logo.gif';
 import './App.css';
 import React from 'react';
-import MatchData from './MatchData.json';
 import EloRating from './elo.js';
 
 const K = 400;
@@ -69,7 +68,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('./Matchdata.json').then((response) => {
+    fetch('./MatchData.json').then((response) => {
       return response.json(); 
     }).then((matchData) => {
         this.setState({
@@ -85,19 +84,18 @@ class App extends React.Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <div id="rankingTable">
-            <h1>Super Street Fighter II X Rankings</h1>
-            <ol>
+            <h1 className="Table-heading">Super Street Fighter II X Rankings</h1>
+            <ul>
               {
                 this.state.rankings.map((player, idx) => {
                   return (
-                    <li key={idx}>{player.name} : {player.score}</li>
+                    <li key={idx} className="List-item">{player.name} : {player.score}</li>
                   );
                 })
               }
-            </ol>
+            </ul>
           </div>
         </header>
-          
       </div>
     );
   }

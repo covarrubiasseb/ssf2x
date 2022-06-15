@@ -159,273 +159,314 @@
       "link": "https://www.youtube.com/watch?v=DDRrNgWuaTU",
       "players": ["0", "1"],
       "characters": ["6", "1"],
-      "score": [10, 1]
+      "score": [1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1],
+      "date":"2018-01-03"
     },
 
     "1": {
       "link": "https://www.youtube.com/watch?v=bzIxIEKjwcw",
       "players": ["0", "2"],
       "characters": ["6", "11"],
-      "score": [10, 6]
+      "score": [0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1],
+      "date":"2018-03-10"
     },
 
     "2": {
       "link": "https://www.youtube.com/watch?v=_VVihGa03xY",
       "players": ["0", "3"],
       "characters": ["6", "0"],
-      "score": [15, 4]
+      "score": [0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1],
+      "date":"2020-03-01"
     },
 
     "3": {
       "link": "https://www.youtube.com/watch?v=1i8itFG-kOA",
       "players": ["0", "4"],
       "characters": ["6", "15"],
-      "score": [2, 3]
+      "score": [0, 1, 1, 0, 0],
+      "date":"22-01-06"
     },
 
     "4": {
       "link": "https://www.youtube.com/watch?v=1v1lygzf5Yg",
       "players": ["0", "5"],
       "characters": ["6", "11"],
-      "score": [10, 9]
+      "score": [0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1],
+      "date":"2021-11-05"
     },
 
     "5": {
       "link": "https://www.youtube.com/watch?v=5QzgnnkxuTM",
       "players": ["4", "6"],
       "characters": ["15", "18"],
-      "score": [10, 6] 
+      "score": [1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1],
+      "date":"2021-10-26" 
     },
 
     "6": {
       "link": "https://www.youtube.com/watch?v=VOuUovZyIuw",
       "players": ["7", "8"],
       "characters": ["15", "13"],
-      "score": [10, 4]
+      "score": [1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1],
+      "date":"2021-11-03"
     },
 
     "7": {
       "link": "https://www.youtube.com/watch?v=Bm5FHwkWuh0",
       "players": ["9", "10"],
       "characters": ["2", "3"],
-      "score": [10, 1]
+      "score": [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+      "date":"2021-10-31"
     },
 
     "8": {
       "link": "https://www.youtube.com/watch?v=eenPVf5V8Lw",
       "players": ["11", "13"],
       "characters": ["4", "6"],
-      "score": [10, 8]
+      "score": [1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1],
+      "date":"2021-10-30"
     },
 
     "9": {
       "link": "https://www.youtube.com/watch?v=MbuvSDOBm0g",
       "players": ["12", "14"],
       "characters": ["3", "8"],
-      "score": [10, 2]
+      "score": [1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1],
+      "date":"2021-10-27"
     },
 
     "10": {
       "link": "https://www.youtube.com/watch?v=zyc1zNz8dZ4",
       "players": ["15", "16"],
       "characters": ["0", "5"],
-      "score": [10, 7]
+      "score": [0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1],
+      "date":"2021-11-01"
     },
 
     "11": {
       "link": "https://www.youtube.com/watch?v=e6p4M7PNYQg",
       "players": ["17", "18"],
       "characters": ["2", "14"],
-      "score": [10, 6]
+      "score": [1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1],
+      "date": "2021-11-04"
     },
 
     "12": {
       "link": "https://www.youtube.com/watch?v=JGwW7AZ1-UQ",
       "players": ["19", "20"],
       "characters": ["10", "12"],
-      "score": [10, 0]
+      "score": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      "date": "2021-10-29"
     },
 
     "13": {
       "link": "https://www.youtube.com/watch?v=LCQeT1Y7XOA",
       "players": ["21", "22"],
       "characters": ["9", "1"],
-      "score": [5, 10]
+      "score": [1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0],
+      "date": "2021-10-28"
+
     },
 
     "14": {
       "link": "https://www.youtube.com/watch?v=722CYbJSPEQ",
       "players": ["23", "24"],
       "characters": ["6", "0"],
-      "score": [9, 10]
+      "score": [0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0],
+      "date":"2021-10-25"
     },
 
     "15": {
       "link": "https://www.youtube.com/watch?v=r3TZvFkxIPo&t=20442s",
       "players": ["25", "26"],
       "characters": ["1", "7"],
-      "score": [10, 9]
+      "score": [0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1],
+      "date":"2021-10-23"
     },
 
     "16": {
       "link": "https://www.youtube.com/watch?v=Hw96WsF1TIM",
       "players": ["4", "27"],
       "characters": ["15", "12"],
-      "score": [10, 5]
+      "score": [1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1],
+      "date": "2022-05-14"
     },
 
     "17": {
       "link": "https://www.youtube.com/watch?v=K1ADpjgeT64",
       "players": ["28", "29"],
       "characters": ["15", "12"],
-      "score": [6, 10]
+      "score": [0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0],
+      "date": "2020-07-19"
     },
 
     "18": {
       "link": "https://www.youtube.com/watch?v=qEXCO_eDT8w",
       "players": ["30", "18"],
       "characters": ["4", "14"],
-      "score": [10, 9]
+      "score": [1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1],
+      "date": "2020-04-05"
     },
 
     "19": {
       "link": "https://www.youtube.com/watch?v=ww2lgKMI-w4",
       "players": ["27", "31"],
       "characters": ["12", "5"],
-      "score": [10, 8]
+      "score": [1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1],
+      "date": "2020-03-22"
     },
 
     "20": {
       "link": "https://www.youtube.com/watch?v=5gR3aahWS_o",
       "players": ["32", "34"],
       "characters": ["12", "30"],
-      "score": [10, 0]
+      "score": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      "date": "2020-02-02"
+
     },
 
     "21": {
       "link": "https://www.youtube.com/watch?v=Nqd-mIfRz0o",
       "players": ["26", "35"],
       "characters": ["7", "12"],
-      "score": [10, 0]
+      "score": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      "date": "2020-01-19"
     },
 
     "22": {
       "link": "https://www.youtube.com/watch?v=DS1_CQLLRio",
       "players": ["36", "37"],
       "characters": ["10", "0"],
-      "score": [6, 10]
+      "score": [1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0],
+      "date": "2019-12-28"
     },
 
     "23": {
       "link": "https://www.youtube.com/watch?v=VXdyhTddFCU",
       "players": ["38", "39"],
       "characters": ["1", "0"],
-      "score": [10, 5]
+      "score": [1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1],
+      "date": "2019-12-01"
     },
 
     "24": {
       "link": "https://www.youtube.com/watch?v=BtOMcLRvI2Y",
       "players": ["13", "25"],
       "characters": ["6", "1"],
-      "score": [9, 10]
+      "score": [0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0],
+      "date": "2019-11-23"
     },
 
     "25": {
       "link": "https://www.youtube.com/watch?v=I_UHRyq0NLc",
       "players": ["0", "40"],
       "characters": ["6", "0"],
-      "score": [10, 4]
+      "score": [0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1],
+      "date": "2019-09-14"
     },
 
     "26": {
       "link": "https://www.youtube.com/watch?v=fq9Sm6MyB5E",
       "players": ["41", "42"],
       "characters": ["0", "6"],
-      "score": [10, 4]
+      "score": [1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1],
+      "date": "2019-09-14"
     },
 
     "27": {
       "link": "https://www.youtube.com/watch?v=iJR--TnbkQE",
       "players": ["43", "44"],
       "characters": ["0", "11"],
-      "score": [10, 7]
+      "score": [0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0],
+      "date": "2019-09-01"
     },
 
     "28": {
       "link": "https://www.youtube.com/watch?v=vIa7OyQLLYQ",
       "players": ["45", "46"],
       "characters": ["11", "12"],
-      "score": [1, 10]
+      "score": [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+      "date": "2019-08-10"
     },
 
     "29": {
       "link": "https://www.youtube.com/watch?v=o9ykhx7hxt8",
       "players": ["21", "47"],
       "characters": ["9", "7"],
-      "score": [10, 6]
+      "score": [1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1],
+      "date": "2019-06-08"
     },
 
     "30": {
       "link": "https://www.youtube.com/watch?v=G_WMECjgk-8",
       "players": ["4", "9"],
       "characters": ["15", "2"],
-      "score": [10, 1]
+      "score": [1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
+      "date": "2019-04-13"
     },
 
     "31": {
       "link": "https://www.youtube.com/watch?v=hlmdsm1ScEs",
       "players": ["35", "16"],
       "characters": ["12", "5"],
-      "score": [6, 10]
+      "score": [1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+      "date": "2019-03-03"
     },
 
     "32": {
       "link": "https://www.youtube.com/watch?v=f4Y8LS_jdro",
       "players": ["17", "48"],
       "characters": ["2", "7"],
-      "score": [3, 10]
+      "score": [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "date": "2019-02-03"
     },
 
     "33": {
       "link": "https://www.youtube.com/watch?v=BwwI7qIBDhE",
       "players": ["11", "13"],
       "characters": ["4", "6"],
-      "score": [10, 3]
+      "score": [1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1],
+      "date": "2019-01-12"
     },
 
     "34": {
       "link": "https://www.youtube.com/watch?v=ORWv8NVakNo",
       "players": ["3", "49"],
       "characters": ["6", "14"],
-      "score": [10, 1]
+      "score": [1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1],
+      "date": "2018-12-02"
     },
 
     "35": {
       "link": "https://www.youtube.com/watch?v=eqDhqhtyXVs",
       "players": ["50", "51"],
       "characters": ["1", "14"],
-      "score": [4, 10]
+      "score": [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0],
+      "date": "2018-10-08"
     }, 
 
     "36": {
       "link": "https://www.youtube.com/watch?v=zVdOUaEZxog",
       "players": ["3", "12"],
       "characters": ["0", "3"],
-      "score": [10, 3]
+      "score": [1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1],
+      "date": "2018-09-02"
     },
 
     "37": {
       "link": "https://www.youtube.com/watch?v=OqcjF_O83IM",
       "players": ["52", "53"],
       "characters": ["0", "5"],
-      "score": [10, 6]
+      "score": [0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1],
+      "date": "2018-08-05"
     },
 
     "38": {
       "link": "https://www.youtube.com/watch?v=AYflmMjPMts",
       "players": ["54", "56"],
       "characters": ["3", "12"],
-      "score": [10, 3]
+      "score": [1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1],
+      "date": "2018-06-09"
     }     
   }
 }
