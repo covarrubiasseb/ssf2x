@@ -3,7 +3,7 @@ import './App.css';
 import React from 'react';
 import EloRating from './elo.js';
 
-const K = 400;
+const K = 60;
 
 class App extends React.Component {
   constructor(props) {
@@ -40,13 +40,13 @@ class App extends React.Component {
         }
       });
 
-      if (gameScore[0] > gameScore[1]) {
-        // player 1 wins
-      rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, K, true);
-      } else {
-        // player 2 wins
-      rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, K, false);
-      }
+      gameScore.forEach((p1wins) => {
+        if (p1wins) {
+          rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, K, true);
+        } else {
+          rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, K, false);
+        }
+      });      
 
       rankings[players[0]].score = rating[0];
       rankings[players[1]].score = rating[1];
