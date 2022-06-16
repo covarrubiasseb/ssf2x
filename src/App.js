@@ -42,9 +42,9 @@ class App extends React.Component {
         <header className="App-header ms-5 me-5">
           <svg>
             <defs>
-              <linearGradient id="MyGradient">
-                <stop offset="5%" stop-color="#00066" />
-                <stop offset="95%" stop-color="#6666FF" />
+              <linearGradient id="RatingBarGradient">
+                <stop offset="5%" stopColor="#00066" />
+                <stop offset="95%" stopColor="#6666FF" />
               </linearGradient>
             </defs>
           </svg>
@@ -57,7 +57,9 @@ class App extends React.Component {
                 <tr className="bg-gradient">
                   <th scope="col">Rank</th>
                   <th scope="col">Player</th>
-                  <th scope="col">Rating</th>
+                  <th scope="col">W/L</th>
+                  <th scope="col">Win%</th>
+                  <th scope="col">Rating(ELO)</th>
                 </tr>
               </thead>
               <tbody className="table-group-divider">
@@ -67,10 +69,12 @@ class App extends React.Component {
                       <tr key={idx}>
                         <th scope="row">{idx+1}</th>
                         <td><img className="me-4 img-fluid" src={"./img/"+player.characterKey+".png"}/>{player.name}</td>
+                        <td className="win-loss">{player.win} - {player.loss}</td>
+                        <td className="win-loss">{Math.round(player.win / (player.win + player.loss) * 100)}%</td>
                         <td>
                           <svg width={this.state.windowWidth / 3} height='50px' className="border border-dark border-2 bg-dark bg-gradient">
                             <g className="bars">
-                              <rect stroke="#000" fill="url(#MyGradient)"
+                              <rect stroke="#000" fill="url(#RatingBarGradient)"
                               width={(this.state.windowWidth / 3) * (player.score/ratingsBarCurve)} height='50'></rect>
                               <text x={(this.state.windowWidth / 4) * (player.score/ratingsBarCurve)} y="80%" transform="skewX(-20)">{player.score}</text>
                             </g>

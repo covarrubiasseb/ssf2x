@@ -27,6 +27,8 @@ function CalcRankings(matchData) {
         rankings[playerKey] = {
           name: matchData.players[playerKey],
           score: BASE_RATING,
+          win: 0,
+          loss: 0 
         };
 
         if (!i) {
@@ -40,8 +42,12 @@ function CalcRankings(matchData) {
     gameScore.forEach((p1wins) => {
       if (p1wins) {
         rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, K, true);
+        rankings[players[0]].win += 1;
+        rankings[players[1]].loss += 1; 
       } else {
         rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, K, false);
+        rankings[players[1]].win += 1;
+        rankings[players[0]].loss += 1;   
       }
     });      
 
@@ -54,6 +60,8 @@ function CalcRankings(matchData) {
     result.push({
       name: rankings[key].name,
       score: rankings[key].score,
+      win: rankings[key].win,
+      loss: rankings[key].loss,
       characterKey: rankings[key].characterKey
     });
   });
