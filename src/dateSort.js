@@ -23,7 +23,7 @@ function SortDate(sets, matchData) {
       } else if (a.date[1] === b.date[1]) {
         if (a.date[2] < b.date[2]) {
           return -1;
-        } else if (a.date[2] ===b.date[2]) {
+        } else if (a.date[2] === b.date[2]) {
           return 0;
         } else {
           return 1;
