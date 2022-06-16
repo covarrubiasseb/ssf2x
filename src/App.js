@@ -2,6 +2,7 @@ import logo from './logo.gif';
 import './App.css';
 import React from 'react';
 import EloRating from './elo.js';
+import SortDate from './dateSort.js'
 
 const K = 60;
 
@@ -21,14 +22,19 @@ class App extends React.Component {
   }
 
   createRankings(matchData) {
-    // start ranking players (starting from end of match list)
     let rankings = Object.create(null);
     let result = [];
-    Object.keys(matchData.sets).sort((a,b) => {
-      return Number(b) - Number(a);
-    }).forEach((matchKey) => {
-      let gameScore = matchData.sets[matchKey].score;
-      let players = matchData.sets[matchKey].players;
+    // sort matches by date
+    let sets = Object.keys(matchData.sets).map((matchKey) => {
+      return {
+        date: matchData.sets[matchKey].date,
+        match: matchKey
+      };
+    });
+
+    SortDate(sets, matchData).forEach((match) => {
+      let gameScore = matchData.sets[match.matchKey].score;
+      let players = matchData.sets[match.matchKey].players;
       let rating;
 
       players.forEach((playerKey) => {
@@ -50,7 +56,6 @@ class App extends React.Component {
 
       rankings[players[0]].score = rating[0];
       rankings[players[1]].score = rating[1];
-
     });
 
     // return rankings
