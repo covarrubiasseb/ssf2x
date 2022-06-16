@@ -68,7 +68,14 @@ function CalcRankings(matchData) {
 
 
   return result.sort((a,b) => {
-    return b.score - a.score;
+    if (a.score === b.score) {
+      let playerAwinPercent = Math.round((a.win / (a.win + a.loss))*100);
+      let playerBwinPercent = Math.round((b.win / (b.win + b.loss))*100);
+
+      return playerBwinPercent - playerAwinPercent;
+    } else {
+      return b.score - a.score;
+    }
   });
 
 }
