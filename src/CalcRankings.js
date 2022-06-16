@@ -17,14 +17,22 @@ function CalcRankings(matchData) {
   SortDate(sets, matchData).forEach((match) => {
     let gameScore = matchData.sets[match.matchKey].score;
     let players = matchData.sets[match.matchKey].players;
+    let playerCharA = matchData.sets[match.matchKey].characters[0];
+    let playerCharB = matchData.sets[match.matchKey].characters[1];
     let rating;
 
-    players.forEach((playerKey) => {
+    players.forEach((playerKey, i) => {
       if (!rankings[playerKey]) {
         rankings[playerKey] = {
           name: matchData.players[playerKey],
-          score: matchData.eloScores[playerKey]
+          score: matchData.eloScores[playerKey],
         };
+
+        if (!i) {
+          rankings[playerKey].characterKey = playerCharA;
+        } else {
+          rankings[playerKey].characterKey = playerCharB;
+        }
       }
     });
 
@@ -44,7 +52,8 @@ function CalcRankings(matchData) {
   Object.keys(rankings).forEach((key) => {
     result.push({
       name: rankings[key].name,
-      score: rankings[key].score
+      score: rankings[key].score,
+      characterKey: rankings[key].characterKey
     });
   });
 

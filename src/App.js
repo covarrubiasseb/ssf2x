@@ -1,3 +1,4 @@
+import title from './title.png'
 import './App.css';
 import React from 'react';
 import CalcRankings from './CalcRankings.js';
@@ -8,7 +9,7 @@ class App extends React.Component {
 
     this.state = {
       rankings: [{
-        name: "",
+        name: '',
         score: 0
       }],
       data: {}
@@ -31,11 +32,13 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header ms-5 me-5">
           <div id="rankingTable">
-            <h1 className="text-center mb-5">Super Street Fighter II X Rankings</h1>
+            <div className="d-flex justify-content-center border-0">
+              <img className="border-0" src={title}/>
+            </div>
             <table className="table table-bordered border-dark border-opacity-10">
               <thead>
                 <tr className="bg-gradient">
-                  <th scope="col">#</th>
+                  <th scope="col">Rank</th>
                   <th scope="col">Player</th>
                   <th scope="col">Rating</th>
                 </tr>
@@ -46,7 +49,7 @@ class App extends React.Component {
                     return (
                       <tr key={idx} className="bg-gradient">
                         <th scope="row">{idx+1}</th>
-                        <td>{player.name}</td>
+                        <td><img src={"./img/"+player.characterKey+".png"}/>{player.name}</td>
                         <td>{player.score}</td>
                       </tr>
                     );
