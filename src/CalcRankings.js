@@ -2,6 +2,7 @@ import SortDate from './SortDate.js';
 import EloRating from './ELO.js';
 
 const K = 60;
+const BASE_RATING = 1800;
 
 function CalcRankings(matchData) {
   let rankings = Object.create(null);
@@ -25,7 +26,7 @@ function CalcRankings(matchData) {
       if (!rankings[playerKey]) {
         rankings[playerKey] = {
           name: matchData.players[playerKey],
-          score: matchData.eloScores[playerKey],
+          score: BASE_RATING,
         };
 
         if (!i) {

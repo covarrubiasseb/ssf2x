@@ -13,9 +13,21 @@
   background-size: cover;
   width: 100%;
   height: 100%;
-  filter: blur(6px);
+  filter: blur(8px) grayscale(100%);
 }
 
 #rankingTable {
   padding-top: 200px;
+}
+
+.ranking-chart {
+  color: white;
+}
+
+.chart-head {
+  color: black;
+}
+
+.table-group-divider {
+  border-top-color: black;
 }
