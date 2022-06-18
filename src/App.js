@@ -14,8 +14,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header ms-5 me-5"></header>
-        
-        <svg>
+
+        <div className="d-flex justify-content-center">
+          <img className="img img-fluid mt-5" src={title} alt="2X Logo"/>
+        </div>
+
+        <svg height="0px" width="0px">
           <defs>
             <linearGradient id="RatingBarGradient">
               <stop offset="5%" stopColor="#00066" />

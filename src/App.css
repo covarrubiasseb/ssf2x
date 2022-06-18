@@ -15,16 +15,16 @@
   filter: blur(8px) grayscale(100%);
 }
 
-#rankingTable {
-  padding-top: 200px;
-}
-
 .table-group-divider {
   border-top-color: black;
 }
 
 .svg-responsive {
   display: none;
+}
+
+.Player {
+  font-size: calc(10px + 2vmin);
 }
 
 .player-profile-link {

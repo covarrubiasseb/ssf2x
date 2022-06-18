@@ -28,7 +28,8 @@ function CalcRankings(matchData) {
           name: matchData.players[playerKey],
           score: BASE_RATING,
           win: 0,
-          loss: 0 
+          loss: 0,
+          playerKey: playerKey
         };
 
         if (!i) {
@@ -63,7 +64,8 @@ function CalcRankings(matchData) {
       score: rankings[key].score,
       win: rankings[key].win,
       loss: rankings[key].loss,
-      characterKey: rankings[key].characterKey
+      characterKey: rankings[key].characterKey,
+      playerKey: rankings[key].playerKey
     });
   });
 

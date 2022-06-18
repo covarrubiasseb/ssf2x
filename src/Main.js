@@ -14,8 +14,8 @@ class Main extends React.Component {
 
     this.state = {
       rankings: [{
-        name: '',
-        score: 0
+        name: 'ultracombo',
+        score: 3000
       }],
       data: {},
       windowWidth: window.innerWidth
@@ -42,10 +42,7 @@ class Main extends React.Component {
   render() {
     return (
       <div className="Main">
-        <div className="table-responsive" id="rankingTable">
-          <div className="d-flex justify-content-center">
-            <img className="img img-fluid" src={title} alt="2X Logo"/>
-          </div>
+        <div className="table-responsive">
           <table className="table table-hover border-dark text-light">
             <thead className="text-black">
               <tr>
@@ -65,9 +62,21 @@ class Main extends React.Component {
                     <tr key={idx}>
                       <th scope="row">{idx+1}</th>
                       <td>
-                        <Link to= "/player" className="text-white player-profile-link">
-                        <img className="me-4 img img-fluid icon-responsive" src={"./img/"+player.characterKey+".png"} alt="character icon"/>
-                        <span className="text-responsive">{player.name}</span>
+                        <Link to="/player" className="text-white player-profile-link" state={
+                          {
+                            data: this.state.data,
+                            name: player.name,
+                            score: player.score,
+                            rank: idx + 1,
+                            playerKey: player.playerKey,
+                            characterKey: player.characterKey,
+                            win: player.win,
+                            loss: player.loss,
+                            winPercent: winPercent
+                          }
+                        }>
+                          <img className="me-4 img img-fluid icon-responsive" src={"./img/"+player.characterKey+".png"} alt="character icon"/>
+                          <span className="text-responsive">{player.name}</span>
                         </Link>
                       </td>
 
