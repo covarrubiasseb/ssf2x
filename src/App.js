@@ -17,15 +17,15 @@ class App extends React.Component {
       data: {},
       windowWidth: window.innerWidth
     }
+  }
 
+  componentDidMount() {
     window.addEventListener('resize', () => {
       this.setState({
         windowWidth: window.innerWidth
       });
     });
-  }
 
-  componentDidMount() {
     fetch('./MatchData.json').then((response) => {
       return response.json(); 
     }).then((matchData) => {
@@ -53,7 +53,7 @@ class App extends React.Component {
               </linearGradient>
             </defs>
           </svg>
-          <div class="table-responsive" id="rankingTable">
+          <div className="table-responsive" id="rankingTable">
             <div className="d-flex justify-content-center">
               <img className="img img-fluid" src={title}/>
             </div>
