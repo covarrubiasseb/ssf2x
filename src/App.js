@@ -58,7 +58,7 @@ class App extends React.Component {
           </svg>
           <div className="table-responsive" id="rankingTable">
             <div className="d-flex justify-content-center">
-              <img className="img img-fluid" src={title}/>
+              <img className="img img-fluid" src={title} alt="2X Logo"/>
             </div>
             <table className="table table-hover border-dark text-light">
               <thead className="text-black">
@@ -79,7 +79,7 @@ class App extends React.Component {
                       <tr key={idx}>
                         <th scope="row">{idx+1}</th>
                         <td>
-                          <img className="me-4 img img-fluid icon-responsive" src={"./img/"+player.characterKey+".png"}/>
+                          <img className="me-4 img img-fluid icon-responsive" src={"./img/"+player.characterKey+".png"} alt="character icon"/>
                           <span className="text-responsive">{player.name}</span>
                         </td>
 
