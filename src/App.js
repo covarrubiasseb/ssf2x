@@ -54,10 +54,10 @@ class App extends React.Component {
             </div>
             <table className="table table-hover border-dark ranking-chart">
               <thead className="chart-head">
-                <tr className="bg-gradient">
+                <tr>
                   <th scope="col">Rank</th>
                   <th scope="col">Player</th>
-                  <th scope="col">W/L</th>
+                  <th scope="col">W - L</th>
                   <th scope="col">Win%</th>
                   <th scope="col">Rating(ELO)</th>
                 </tr>
@@ -68,14 +68,14 @@ class App extends React.Component {
                     return (
                       <tr key={idx}>
                         <th scope="row">{idx+1}</th>
-                        <td><img className="me-4 img-fluid" src={"./img/"+player.characterKey+".png"}/>{player.name}</td>
-                        <td className="win-loss">{player.win} - {player.loss}</td>
-                        <td className="win-loss">{Math.round(player.win / (player.win + player.loss) * 100)}%</td>
+                        <td><img className="me-4 img-fluid" src={"./img/"+player.characterKey+".png"}/><em>{player.name}</em></td>
+                        <td className="win-loss"><em><div className="border border-dark bg-gradient mt-1 text-center">{player.win} - {player.loss}</div></em></td>
+                        <td className="win-percent"><div className="border border-dark bg-gradient mt-1 text-center"><em>{Math.round(player.win / (player.win + player.loss) * 100)}%</em></div></td>
                         <td>
-                          <svg width={this.state.windowWidth / 3} height='50px' className="border border-dark border-2 bg-dark bg-gradient">
+                          <svg width={this.state.windowWidth / 3} height='60px' className="border border-dark border-2 bg-dark bg-gradient">
                             <g className="bars">
                               <rect stroke="#000" fill="url(#RatingBarGradient)"
-                              width={(this.state.windowWidth / 3) * (player.score/ratingsBarCurve)} height='50'></rect>
+                              width={(this.state.windowWidth / 3) * (player.score/ratingsBarCurve)} height='60px'></rect>
                               <text x={(this.state.windowWidth / 4) * (player.score/ratingsBarCurve)} y="80%" transform="skewX(-20)">{player.score}</text>
                             </g>
                           </svg>
