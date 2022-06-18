@@ -1,6 +1,6 @@
 function Probability(rating1, rating2) {
   return (
-    (1.0 * 1.0) / (1 + 1.0 * Math.pow(10, (1.0 * (rating1 - rating2)) / 400));
+    (1.0 * 1.0) / (1 + 1.0 * Math.pow(10, (1.0 * (rating1 - rating2)) / 400))
   );
 }
 // K is a constant.
