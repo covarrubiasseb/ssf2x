@@ -41,3 +41,12 @@
     border: 1px solid black;
   }
 }
+
+@media (max-width: 700px) {
+  .win-responsive {
+    display: none;
+  }
+  .loss-responsive {
+    display: none;
+  }
+}

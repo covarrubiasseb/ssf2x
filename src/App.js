@@ -65,8 +65,8 @@ class App extends React.Component {
                 <tr>
                   <th scope="col"><em>Rank</em></th>
                   <th scope="col"><em>Player</em></th>
-                  <th className="text-center" scope="col"><em>W</em></th>
-                  <th className="text-center" scope="col"><em>L</em></th>
+                  <th className="text-center win-responsive" scope="col"><em>W</em></th>
+                  <th className="text-center loss-responsive" scope="col"><em>L</em></th>
                   <th scope="col"><em>Win%</em></th>
                   <th scope="col"><em>Rating(ELO)</em></th>
                 </tr>
@@ -82,13 +82,13 @@ class App extends React.Component {
                           <img className="me-4 img-fluid" src={"./img/"+player.characterKey+".png"}/>{player.name}
                         </td>
 
-                        <td>
+                        <td className="win-responsive">
                           <div className="mt-1 text-center text-black bg-gradient rounded-pill ps-1 pe-1">
                             <em>{player.win}</em>
                           </div>
                         </td>
 
-                        <td>
+                        <td className="loss-responsive">
                           <div className="mt-1 text-center text-black bg-gradient rounded-pill ps-1 pe-1">
                             <em>{player.loss}</em>
                           </div>
