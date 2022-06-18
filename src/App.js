@@ -63,11 +63,11 @@ class App extends React.Component {
             <table className="table table-hover border-dark ranking-chart">
               <thead className="chart-head">
                 <tr>
-                  <th scope="col">Rank</th>
-                  <th scope="col">Player</th>
-                  <th scope="col">W/L</th>
-                  <th scope="col">Win%</th>
-                  <th scope="col">Rating(ELO)</th>
+                  <th scope="col"><em>Rank</em></th>
+                  <th scope="col"><em>Player</em></th>
+                  <th scope="col"><em>W/L</em></th>
+                  <th scope="col"><em>Win%</em></th>
+                  <th scope="col"><em>Rating(ELO)</em></th>
                 </tr>
               </thead>
               <tbody className="table-group-divider">
@@ -78,7 +78,7 @@ class App extends React.Component {
                       <tr key={idx}>
                         <th scope="row">{idx+1}</th>
                         <td>
-                          <img className="me-4 img-fluid" src={"./img/"+player.characterKey+".png"}/><em>{player.name}</em>
+                          <img className="me-4 img-fluid" src={"./img/"+player.characterKey+".png"}/>{player.name}
                         </td>
 
                         <td className="win-loss">
