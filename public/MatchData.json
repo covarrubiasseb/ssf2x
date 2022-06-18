@@ -79,7 +79,10 @@
     "76": "Nakamu",
     "77": "Cross",
     "78": "AOB",
-    "79": "8Doors"
+    "79": "8Doors",
+    "80": "Tenchin",
+    "81": "Isaji",
+    "82": "Fujinuma"
   },
 
   "characters": {
@@ -586,7 +589,7 @@
 
     "58": {
       "link": "https://youtube.com/watch?v=nuAkXxYl1v8?t=1153",
-      "players": ["39", "70"],
+      "players": ["39", "71"],
       "characters": ["0", "17"],
       "score": [0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0],
       "date": "2022-03-06"
@@ -694,6 +697,54 @@
       "characters": ["0", "0"],
       "score": [0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0],
       "date": "2021-08-14"
+    },
+
+    "72": {
+      "link": "https://youtube.com/watch?v=aHFhFmwb24o?t=637",
+      "players": ["80", "38"],
+      "characters": ["10", "1"],
+      "score": [0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0],
+      "date": "2021-01-02"
+    },
+
+    "73": {
+      "link": "https://youtube.com/watch?v=aHFhFmwb24o?t=2442",
+      "players": ["50", "81"],
+      "characters": ["1", "9"],
+      "score": [1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0],
+      "date": "2021-01-02"
+    },
+
+    "74": {
+      "link": "https://youtube.com/watch?v=aHFhFmwb24o?t=4534",
+      "players": ["13", "10"],
+      "characters": ["6", "3"],
+      "score": [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0],
+      "date": "2021-01-02"
+    },
+
+    "75": {
+      "link": "https://youtube.com/watch?v=Usas2R26S0s?t=1102",
+      "players": ["82", "80"],
+      "characters": ["5", "10"],
+      "score": [0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1],
+      "date": "2021-02-12"
+    },
+
+    "76": {
+      "link": "https://youtube.com/watch?v=Usas2R26S0s?t=3541",
+      "players": ["50", "12"],
+      "characters": ["1", "3"],
+      "score": [0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1],
+      "date": "2021-02-12"
+    },
+
+    "77": {
+      "link": "https://youtube.com/watch?v=Usas2R26S0s?t=5953",
+      "players": ["8", "28"],
+      "characters": ["10", "15"],
+      "score": [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "date": "2021-02-12"
     }
   }
 }
