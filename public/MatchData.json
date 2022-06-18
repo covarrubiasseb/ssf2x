@@ -56,7 +56,30 @@
     "53": "Suzuki",
     "54": "Kusa",
     "55": "riz0ne",
-    "56": "Nikaiten"
+    "56": "Nikaiten",
+    "57": "Nakamura",
+    "58": "Gucchi",
+    "59": "Yakitori",
+    "60": "Tsunoppi",
+    "61": "Katou",
+    "62": "Shonan",
+    "63": "Jene",
+    "64":"Makiri",
+    "65": "Hachibee",
+    "66": "Listy",
+    "67": "Sekiya",
+    "68": "Kamille",
+    "69": "NounouB",
+    "70": "Fuji",
+    "71": "PECO",
+    "72": "Matsukiyo",
+    "73": "Shibaken",
+    "74": "Kroos",
+    "75": "2P",
+    "76": "Nakamu",
+    "77": "Cross",
+    "78": "AOB",
+    "79": "8Doors"
   },
 
   "characters": {
@@ -82,7 +105,7 @@
     "19": "S Chun Li",
     "20": "S Blanka",
     "21": "S Zangief",
-    "22": "S GS uile",
+    "22": "S Guile",
     "23": "S Dhalsim",
     "24": "S T.Hawk",
     "25": "S Cammy",
@@ -407,6 +430,270 @@
       "characters": ["3", "12"],
       "score": [1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1],
       "date": "2018-06-09"
-    }     
+    },
+
+    "39": {
+      "link": "https://www.youtube.com/watch?v=3AdOak1GSxg",
+      "players": ["12", "57"],
+      "characters": ["3", "9"],
+      "score": [1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1],
+      "date": "2021-09-28"
+    },
+
+    "40": {
+      "link": "https://youtube.com/watch?v=3AdOak1GSxg?t=2920",
+      "players": ["58", "59"],
+      "characters": ["0", "24"],
+      "score": [1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0],
+      "date": "2021-09-28"
+    },
+
+    "41": {
+      "link": "https://youtube.com/watch?v=3AdOak1GSxg?t=4695",
+      "players": ["9", "50"],
+      "characters": ["2", "1"],
+      "score": [0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1],
+      "date": "2021-09-28"
+    },
+
+    "42": {
+      "link": "https://youtube.com/watch?v=3AdOak1GSxg?t=6493",
+      "players": ["52", "4"],
+      "characters": ["0", "15"],
+      "score": [0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1],
+      "date": "2021-09-28"
+    },
+
+    "43": {
+      "link": "https://youtube.com/watch?v=ED5TV15nXW0?t=208",
+      "players": ["60", "41"],
+      "characters": ["6", "0"],
+      "score": [0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+      "date": "2022-03-15"
+    },
+
+    "44": {
+      "link": "https://youtube.com/watch?v=ED5TV15nXW0?t=2396",
+      "players": ["61", "17"],
+      "characters": ["11", "2"],
+      "score": [1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1],
+      "date": "2022-03-15"
+    },
+
+    "45": {
+      "link": "https://youtube.com/watch?v=ED5TV15nXW0?t=4126",
+      "players": ["62", "63"],
+      "characters": ["0", "19"],
+      "score": [1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0],
+      "date": "2022-03-15"
+    },
+
+    "46": {
+      "link": "https://youtube.com/watch?v=ED5TV15nXW0?t=5643",
+      "players": ["52", "25"],
+      "characters": ["0", "1"],
+      "score": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      "date": "2022-03-15"
+    },
+
+    "47": {
+      "link": "https://youtube.com/watch?v=MB8vcNFNqnI?t=601",
+      "players": ["64", "6"],
+      "characters": ["1", "2"],
+      "score": [0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0],
+      "date": "2022-02-08"
+    },
+
+    "48": {
+      "link": "https://youtube.com/watch?v=MB8vcNFNqnI?t=2652",
+      "players": ["62", "56"],
+      "characters": ["0", "12"],
+      "score": [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+      "date": "2022-02-08"
+    },
+
+    "49": {
+      "link": "https://youtube.com/watch?v=MB8vcNFNqnI?t=4032",
+      "players": ["65", "66"],
+      "characters": ["6", "0"],
+      "score": [1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1],
+      "date": "2022-02-08"
+    },
+
+    "50": {
+      "link": "https://youtube.com/watch?v=MB8vcNFNqnI?t=5792",
+      "players": ["53", "52"],
+      "characters": ["5", "0"],
+      "score": [0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0],
+      "date": "2022-02-08"
+    },
+
+    "51": {
+      "link": "https://youtube.com/watch?v=EVsfHjIOds4?t=441",
+      "players": ["53", "64"],
+      "characters": ["5", "1"],
+      "score": [0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1],
+      "date": "2022-01-22"
+    },
+
+    "52": {
+      "link": "https://youtube.com/watch?v=EVsfHjIOds4?t=2118",
+      "players": ["67", "68"],
+      "characters": ["2", "0"],
+      "score": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      "date": "2022-01-22"
+    },
+
+    "53": {
+      "link": "https://youtube.com/watch?v=EVsfHjIOds4?t=3457",
+      "players": ["43", "12"],
+      "characters": ["0", "3"],
+      "score": [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0],
+      "date": "2022-01-22"
+    },
+
+    "54": {
+      "link": "https://youtube.com/watch?v=EVsfHjIOds4?t=5016",
+      "players": ["10", "56"],
+      "characters": ["3", "12"],
+      "score": [0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1],
+      "date": "2022-01-22"
+    },
+
+    "55": {
+      "link": "https://youtube.com/watch?v=1Tc357TgPTM?t=451",
+      "players": ["61", "69"],
+      "characters": ["11", "12"],
+      "score": [0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0],
+      "date": "2022-05-01"
+    },
+
+    "56": {
+      "link": "https://youtube.com/watch?v=1Tc357TgPTM?t=2393",
+      "players": ["50", "44"],
+      "characters": ["1", "11"],
+      "score": [1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1],
+      "date": "2022-05-01"
+    },
+
+    "57": {
+      "link": "https://youtube.com/watch?v=1Tc357TgPTM?t=4922",
+      "players": ["16", "70"],
+      "characters": ["5", "14"],
+      "score": [1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0],
+      "date": "2022-05-01"
+    },
+
+    "58": {
+      "link": "https://youtube.com/watch?v=nuAkXxYl1v8?t=1153",
+      "players": ["39", "70"],
+      "characters": ["0", "17"],
+      "score": [0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0],
+      "date": "2022-03-06"
+    },
+
+    "59": {
+      "link": "https://youtube.com/watch?v=nuAkXxYl1v8?t=3302",
+      "players": ["72", "73"],
+      "characters": ["14", "1"],
+      "score": [1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1],
+      "date": "2022-03-06"
+    },
+
+    "60": {
+      "link": "https://youtube.com/watch?v=nuAkXxYl1v8?t=4978",
+      "players": ["73", "74"],
+      "characters": ["1", "6"],
+      "score": [0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1],
+      "date": "2022-03-06"
+    },
+
+    "61": {
+      "link": "https://youtube.com/watch?v=_CvtdtD6R-U?t=259",
+      "players": ["75", "9"],
+      "characters": ["11", "2"],
+      "score": [0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1],
+      "date": "2021-27-07"
+    },
+
+    "62": {
+      "link": "https://youtube.com/watch?v=_CvtdtD6R-U?t=2694",
+      "players": ["60", "63"],
+      "characters": ["6", "19"],
+      "score": [1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1],
+      "date": "2021-27-07"
+    },
+
+    "63": {
+      "link": "https://youtube.com/watch?v=_CvtdtD6R-U?t=4393",
+      "players": ["72", "52"],
+      "characters": ["14", "0"],
+      "score": [0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0],
+      "date": "2021-27-07"
+    },
+
+    "64": {
+      "link": "https://youtube.com/watch?v=MeFhylmuMWE?t=136",
+      "players": ["26", "43"],
+      "characters": ["7", "0"],
+      "score": [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      "date": "2021-08-10"
+    },
+
+    "65": {
+      "link": "https://youtube.com/watch?v=MeFhylmuMWE?t=1785",
+      "players": ["37", "75"],
+      "characters": ["11", "0"],
+      "score": [1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0],
+      "date": "2021-08-10"
+    },
+
+    "66": {
+      "link": "https://youtube.com/watch?v=MeFhylmuMWE?t=3929",
+      "players": ["54", "76"],
+      "characters": ["3", "4"],
+      "score": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+      "date": "2021-08-10"
+    },
+
+    "67": {
+      "link": "https://youtube.com/watch?v=MeFhylmuMWE?t=5595",
+      "players": ["77", "78"],
+      "characters": ["10", "13"],
+      "score": [0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+      "date": "2021-08-10"
+    },
+
+    "68": {
+      "link": "https://youtube.com/watch?v=DUinGkRI82E?t=236",
+      "players": ["26", "79"],
+      "characters": ["7", "2"],
+      "score": [0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1],
+      "date": "2021-08-14"
+    },
+
+    "69": {
+      "link": "https://youtube.com/watch?v=DUinGkRI82E?t=1886",
+      "players": ["20", "12"],
+      "characters": ["12", "3"],
+      "score": [0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0],
+      "date": "2021-08-14"
+    },
+
+    "70": {
+      "link": "https://youtube.com/watch?v=DUinGkRI82E?t=4006",
+      "players": ["8", "56"],
+      "characters": ["13", "12"],
+      "score": [1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1],
+      "date": "2021-08-14"
+    },
+
+    "71": {
+      "link": "https://youtube.com/watch?v=DUinGkRI82E?t=5741",
+      "players": ["39", "66"],
+      "characters": ["0", "0"],
+      "score": [0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0],
+      "date": "2021-08-14"
+    }
   }
 }

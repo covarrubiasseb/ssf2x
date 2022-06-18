@@ -1,4 +1,3 @@
-import title from './title.png';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CalcRankings from './CalcRankings.js';
@@ -93,9 +92,9 @@ class Main extends React.Component {
                       </td>
 
                       <td className="win-percent">
-                        <svg width={this.state.windowWidth / WINPERCENT_BAR_TO_WINDOW_WIDTH_RATIO} height='60px' className="border border-dark border-2 bg-gradient">
+                        <svg width={this.state.windowWidth / WINPERCENT_BAR_TO_WINDOW_WIDTH_RATIO} height='60px' className="border border-dark rounded-pill border-2 bg-gradient">
                           <g className="bars">
-                            <rect stroke="#000" fill="url(#winPercentGradient)" height='60px'
+                            <rect stroke="#333" fill="url(#winPercentGradient)" height='60px'
                             width={(this.state.windowWidth / WINPERCENT_BAR_TO_WINDOW_WIDTH_RATIO) * (winPercent / 100)}></rect>
                             <text x="20%" y="80%" fill="#DDD" transform="skewX(-10) scale(0.55 0.55)">{winPercent}%</text>
                           </g>
@@ -104,9 +103,9 @@ class Main extends React.Component {
                       </td>
 
                       <td>
-                        <svg width={this.state.windowWidth / RATINGS_BAR_TO_WINDOW_WIDTH_RATIO} height='60px' className="border border-dark border-2 bg-gradient">
+                        <svg width={this.state.windowWidth / RATINGS_BAR_TO_WINDOW_WIDTH_RATIO} height='60px' className="border border-dark  rounded-pill border-2 bg-gradient">
                           <g className="bars">
-                            <rect stroke="#000" fill="url(#RatingBarGradient)"
+                            <rect stroke="#333" fill="url(#RatingBarGradient)"
                             width={(this.state.windowWidth / RATINGS_BAR_TO_WINDOW_WIDTH_RATIO) * (player.score/RATINGS_BAR_CURVE)} height='60px'></rect>
                             <text x={(this.state.windowWidth / RATINGS_BAR_TEXT_RATIO) * (player.score/RATINGS_BAR_CURVE)} y="80%" transform="skewX(-15)">{player.score}</text>
                           </g>
