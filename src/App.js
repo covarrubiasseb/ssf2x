@@ -53,7 +53,7 @@ class App extends React.Component {
               </linearGradient>
             </defs>
           </svg>
-          <div id="rankingTable">
+          <div class="table-responsive" id="rankingTable">
             <div className="d-flex justify-content-center">
               <img className="img img-fluid" src={title}/>
             </div>
@@ -62,7 +62,7 @@ class App extends React.Component {
                 <tr>
                   <th scope="col">Rank</th>
                   <th scope="col">Player</th>
-                  <th scope="col">W - L</th>
+                  <th scope="col">W/L</th>
                   <th scope="col">Win%</th>
                   <th scope="col">Rating(ELO)</th>
                 </tr>
