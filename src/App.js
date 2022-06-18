@@ -83,13 +83,13 @@ class App extends React.Component {
                         </td>
 
                         <td>
-                          <div className="mt-1 text-center">
+                          <div className="mt-1 text-center text-black bg-gradient rounded-pill ps-1 pe-1">
                             <em>{player.win}</em>
                           </div>
                         </td>
 
                         <td>
-                          <div className="mt-1 text-center">
+                          <div className="mt-1 text-center text-black bg-gradient rounded-pill ps-1 pe-1">
                             <em>{player.loss}</em>
                           </div>
                         </td>
@@ -102,7 +102,7 @@ class App extends React.Component {
                               <text x="20%" y="80%" fill="#DDD" transform="skewX(-10) scale(0.55 0.55)">{winPercent}%</text>
                             </g>
                           </svg>
-                          <div className="svg-responsive mt-1">{winPercent}%</div>
+                          <div className="svg-responsive mt-1 text-center bg-gradient rounded-pill"><em>{winPercent}%</em></div>
                         </td>
 
                         <td>
@@ -114,7 +114,7 @@ class App extends React.Component {
                             </g>
                           </svg>
 
-                          <div className="svg-responsive mt-1">{player.score}</div>
+                          <div className="svg-responsive mt-1 text-center text-black bg-gradient rounded-pill"><em>{player.score}</em></div>
                         </td>
                       </tr>
                     );
