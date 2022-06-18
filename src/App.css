@@ -20,22 +20,24 @@
   padding-top: 200px;
 }
 
-.ranking-chart {
-  color: white;
-}
-
-.chart-head {
-  color: black;
-}
-
 .table-group-divider {
   border-top-color: black;
 }
 
-.win-loss {
-  color: black;
+.svg-responsive {
+  display: none;
 }
 
-.win-percent {
-  color: black;
+@media (max-width: 1150px) {
+  svg {
+    display: none;
+  }
+
+  .svg-responsive {
+    display: block;
+  }
+
+  th, td {
+    border: 1px solid black;
+  }
 }

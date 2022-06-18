@@ -60,12 +60,13 @@ class App extends React.Component {
             <div className="d-flex justify-content-center">
               <img className="img img-fluid" src={title}/>
             </div>
-            <table className="table table-hover border-dark ranking-chart">
-              <thead className="chart-head">
+            <table className="table table-hover border-dark text-light">
+              <thead className="text-black">
                 <tr>
                   <th scope="col"><em>Rank</em></th>
                   <th scope="col"><em>Player</em></th>
-                  <th scope="col"><em>W/L</em></th>
+                  <th className="text-center" scope="col"><em>W</em></th>
+                  <th className="text-center" scope="col"><em>L</em></th>
                   <th scope="col"><em>Win%</em></th>
                   <th scope="col"><em>Rating(ELO)</em></th>
                 </tr>
@@ -81,9 +82,15 @@ class App extends React.Component {
                           <img className="me-4 img-fluid" src={"./img/"+player.characterKey+".png"}/>{player.name}
                         </td>
 
-                        <td className="win-loss">
-                          <div className="border border-dark bg-gradient mt-1 text-center">
-                            <em>{player.win} - {player.loss}</em>
+                        <td>
+                          <div className="mt-1 text-center">
+                            <em>{player.win}</em>
+                          </div>
+                        </td>
+
+                        <td>
+                          <div className="mt-1 text-center">
+                            <em>{player.loss}</em>
                           </div>
                         </td>
 
@@ -95,6 +102,7 @@ class App extends React.Component {
                               <text x="20%" y="80%" fill="#DDD" transform="skewX(-10) scale(0.55 0.55)">{winPercent}%</text>
                             </g>
                           </svg>
+                          <div className="svg-responsive mt-1">{winPercent}%</div>
                         </td>
 
                         <td>
@@ -105,6 +113,8 @@ class App extends React.Component {
                               <text x={(this.state.windowWidth / RATINGS_BAR_TEXT_RATIO) * (player.score/RATINGS_BAR_CURVE)} y="80%" transform="skewX(-15)">{player.score}</text>
                             </g>
                           </svg>
+
+                          <div className="svg-responsive mt-1">{player.score}</div>
                         </td>
                       </tr>
                     );
