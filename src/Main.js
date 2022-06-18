@@ -43,11 +43,11 @@ class Main extends React.Component {
     return (
       <div className="Main">
         <div className="table-responsive">
-          <table className="table table-hover border-dark text-light">
+          <table className="table table-hover border-dark text-white-50">
             <thead className="text-black">
               <tr>
-                <th scope="col"><em className="rank-responsive">Rank</em></th>
-                <th scope="col"><em>Player</em></th>
+                <th className="text-center" scope="col"><em className="rank-responsive">Rank</em></th>
+                <th className="text-center" scope="col"><em>Player</em></th>
                 <th className="text-center win-responsive" scope="col"><em>W</em></th>
                 <th className="text-center loss-responsive" scope="col"><em>L</em></th>
                 <th scope="col"><em>Win%</em></th>
@@ -60,7 +60,7 @@ class Main extends React.Component {
                   let winPercent = Math.round(player.win / (player.win + player.loss) * 100);
                   return (
                     <tr key={idx}>
-                      <th scope="row">{idx+1}</th>
+                      <th scope="row"><span className="ps-3 pe-3">{idx+1}</span></th>
                       <td>
                         <Link to="/player" className="text-white player-profile-link" state={
                           {
@@ -76,7 +76,7 @@ class Main extends React.Component {
                           }
                         }>
                           <img className="me-4 img img-fluid icon-responsive" src={"./img/"+player.characterKey+".png"} alt="character icon"/>
-                          <span className="text-responsive">{player.name}</span>
+                          <span className="text-responsive text-black">{player.name}</span>
                         </Link>
                       </td>
 
