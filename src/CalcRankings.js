@@ -39,6 +39,7 @@ function CalcRankings(matchData) {
       }
     });
 
+    // update player ratings
     gameScore.forEach((p1wins) => {
       if (p1wins) {
         rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, K, true);
@@ -66,7 +67,7 @@ function CalcRankings(matchData) {
     });
   });
 
-
+  // sort result by win percent in case of tied ratings
   return result.sort((a,b) => {
     if (a.score === b.score) {
       let playerAwinPercent = Math.round((a.win / (a.win + a.loss))*100);
@@ -79,6 +80,5 @@ function CalcRankings(matchData) {
   });
 
 }
-
 
 export default CalcRankings;

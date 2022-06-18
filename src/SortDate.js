@@ -37,4 +37,4 @@ function SortDate(sets, matchData) {
   });
 }
 
-export default SortDate
+export default SortDate;

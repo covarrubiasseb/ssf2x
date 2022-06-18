@@ -1,11 +1,8 @@
-// Function to calculate the Probability
 function Probability(rating1, rating2) {
   return (
-    (1.0 * 1.0) / (1 + 1.0 * Math.pow(10, (1.0 * (rating1 - rating2)) / 400))
+    (1.0 * 1.0) / (1 + 1.0 * Math.pow(10, (1.0 * (rating1 - rating2)) / 400));
   );
 }
-
-// Function to calculate Elo rating
 // K is a constant.
 // d determines whether Player A wins
 // or Player B.
@@ -32,8 +29,8 @@ function EloRating(Ra, Rb, K, d) {
     Rb = Rb + K * (1 - Pb);
   }
 
-  Ra = Math.round(Ra * 1.0) / 1.0;
-  Rb = Math.round(Rb * 1.0) / 1.0;
+  Ra = Math.round(Ra);
+  Rb = Math.round(Rb);
 
   return [Ra, Rb];
 }
