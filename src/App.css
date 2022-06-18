@@ -1,8 +1,7 @@
-.App-header {
+.Main {
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-header::before {
   content: "";
   position: fixed;
@@ -26,6 +25,10 @@
 
 .svg-responsive {
   display: none;
+}
+
+.player-profile-link {
+  text-decoration: none;
 }
 
 @media (max-width: 1150px) {
