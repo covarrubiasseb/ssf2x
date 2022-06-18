@@ -63,7 +63,7 @@ class App extends React.Component {
             <table className="table table-hover border-dark text-light">
               <thead className="text-black">
                 <tr>
-                  <th scope="col"><em>Rank</em></th>
+                  <th scope="col"><em className="rank-responsive">Rank</em></th>
                   <th scope="col"><em>Player</em></th>
                   <th className="text-center win-responsive" scope="col"><em>W</em></th>
                   <th className="text-center loss-responsive" scope="col"><em>L</em></th>
@@ -79,7 +79,8 @@ class App extends React.Component {
                       <tr key={idx}>
                         <th scope="row">{idx+1}</th>
                         <td>
-                          <img className="me-4 img-fluid" src={"./img/"+player.characterKey+".png"}/>{player.name}
+                          <img className="me-4 img img-fluid icon-responsive" src={"./img/"+player.characterKey+".png"}/>
+                          <span className="text-responsive">{player.name}</span>
                         </td>
 
                         <td className="win-responsive">

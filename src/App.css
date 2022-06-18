@@ -49,4 +49,15 @@
   .loss-responsive {
     display: none;
   }
+
+  .rank-responsive {
+    display: none;
+  }
+  .icon-responsive {
+    width: 15%;
+  }
+
+  .text-responsive {
+    font-size: 80%;
+  }
 }
