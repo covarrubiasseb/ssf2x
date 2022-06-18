@@ -2,7 +2,6 @@ import React from 'react';
 import { useLocation } from 'react-router-dom'; 
 import SortDate from './SortDate.js';
 
-const LINK_ID_SLICE_INDEX = 32;
 const IFRAME_WIDTH = 480;
 const IFRAME_HEIGHT = 320;
 
@@ -88,7 +87,7 @@ const Player = (props) => {
             }
           }
           return (
-            <li key={idx} className="d-flex justify-content-around mt-2 border border-dark pt-2 pb-2">
+            <li key={idx} className="d-flex justify-content-around mt-2 border border-dark pt-2 pb-2 me-4">
               <div className="text-black bg-transparent border-none">
                 <h3 class="text-center card-title">{playerA} vs {playerB}</h3>
                 <p class="card-text">Date: {set.date}</p>
@@ -96,7 +95,7 @@ const Player = (props) => {
                 <p class="card-text">Result: {playerWin ? "Win" : "Loss"}</p>
               </div>
               <iframe title={"match-"+{idx}} width={IFRAME_WIDTH} height={IFRAME_HEIGHT} 
-              src={"https://www.youtube.com/embed/"+set.link.slice(LINK_ID_SLICE_INDEX)}>
+              src={"https://www.youtube.com/embed/"+set.link}>
               </iframe>
             </li>
           );
