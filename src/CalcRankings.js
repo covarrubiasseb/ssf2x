@@ -15,7 +15,7 @@ function CalcRankings(matchData) {
     };
   });
 
-  SortDate(sets, matchData).forEach((match) => {
+  SortDate(sets).forEach((match) => {
     let gameScore = matchData.sets[match.matchKey].score;
     let players = matchData.sets[match.matchKey].players;
     let playerCharA = matchData.sets[match.matchKey].characters[0];

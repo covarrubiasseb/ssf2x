@@ -1,4 +1,4 @@
-function SortDate(sets, matchData) {
+function SortDate(sets) {
 
   let mappedDates = sets.map((set) => {
     let date = set.date;
