@@ -78,11 +78,10 @@ const Player = (props) => {
         <div className="d-flex flex-row">
           <div className="w-50"><em>Rating</em></div>
           <div className="w-50">{data.state.score}</div>
-        </div>
-        
+        </div>   
       </div>
 
-      <ul><h1 className="text-white-50 text-center">Match History</h1> {
+      <ul><h1 className="text-white-50 pe-4 text-center">Match History</h1> {
         sets.map((set, idx) => {
           let playerA = data.state.data.players[set.players['0']];
           let playerB = data.state.data.players[set.players['1']];
@@ -150,7 +149,7 @@ const Player = (props) => {
               </div>
 
               <div className="match-table-responsive">
-                <h1 className="text-center">{playerA} vs {playerB}</h1>
+                <h1 className="text-center pt-2 ps-1 pe-1">{playerA} vs {playerB}</h1>
 
                 <div className="d-flex">
                   <iframe className="w-100" title={"match-"+{idx}} width={IFRAME_WIDTH} height={IFRAME_HEIGHT} 
@@ -164,7 +163,7 @@ const Player = (props) => {
                 </div>
 
                 <div className=" d-flex flex-row text-center">
-                  <div className="w-50">W-L</div>
+                  <div className="w-50">W - L</div>
                   <div className="w-50">{Math.max(p1WinTotal, p2WinTotal)} - {Math.min(p1WinTotal, p2WinTotal)}</div>
                 </div>
 
