@@ -87,6 +87,7 @@ const Player = (props) => {
           let playerB = data.state.data.players[set.players['1']];
           let p2WinTotal = 0;
           let playerWin;
+          let isp1;
 
           let p1WinTotal = set.score.reduce((curr, acc) => {
             return curr + acc;
@@ -100,6 +101,7 @@ const Player = (props) => {
 
           if (data.state.playerKey === set.players[0]) {
             // player is P1
+            isp1 = true;
             if (p1WinTotal > (set.score.length / 2)) {
               playerWin = true;
             } else {
@@ -107,6 +109,7 @@ const Player = (props) => {
             }
           } else {
             // player is P2
+            isp1 = false;
             if (p1WinTotal > (set.score.length / 2)) {
               playerWin = false;
             } else {
@@ -126,12 +129,12 @@ const Player = (props) => {
 
                     <div className="d-flex flex-row">
                       <div className="w-50 border-end border-dark">W</div>
-                      <div className="w-50">{Math.max(p1WinTotal, p2WinTotal)}</div>
+                      <div className="w-50">{isp1 ? p1WinTotal : p2WinTotal}</div>
                     </div>
 
                     <div className="d-flex flex-row">
                       <div className="w-50 border-end border-dark">L</div>
-                      <div className="w-50">{Math.min(p1WinTotal, p2WinTotal)}</div>
+                      <div className="w-50">{!isp1 ? p1WinTotal  : p2WinTotal}</div>
                     </div>
 
                     <div className="d-flex flex-row">  
@@ -142,8 +145,7 @@ const Player = (props) => {
 
                   <div className="w-50 d-flex justify-content-center">
                     <iframe className="pt-3 pb-3" title={"match-"+{idx}} width={IFRAME_WIDTH} height={IFRAME_HEIGHT} 
-                    src={"https://www.youtube.com/embed/"+set.link}>
-                    </iframe>
+                    src={"https://youtube.com/embed/"+set.link} allowfullscreen></iframe>
                   </div>
                 </div>
               </div>
@@ -153,7 +155,7 @@ const Player = (props) => {
 
                 <div className="d-flex">
                   <iframe className="w-100" title={"match-"+{idx}} width={IFRAME_WIDTH} height={IFRAME_HEIGHT} 
-                  src={"https://www.youtube.com/embed/"+set.link}>
+                  src={"https://www.youtube.com/embed/"+set.link} allowfullscreen>
                   </iframe>
                 </div>
 
