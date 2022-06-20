@@ -81,18 +81,21 @@
     font-size: 80%;
   }
 
-  .match-table-responsive {
-    flex-direction: column;
-    align-items: center;
+  .player-info {
+    display: none;
   }
 
-  .player-info {
+  .match-table {
     display: none;
   }
 }
 
 @media (min-width: 700px) {
   .player-info-responsive {
+    display: none;
+  }
+
+  .match-table-responsive {
     display: none;
   }
 }

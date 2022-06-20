@@ -115,33 +115,63 @@ const Player = (props) => {
             }
           }
           return (
-            <li key={idx} className="d-flex mt-2 border border-dark me-4 text-white-50 match-table-responsive">
-              <div className="text-center ms-4 mb-4 mt-4 me-4 w-50">
-                <h1 className="border-bottom border-dark">{playerA} vs {playerB}</h1>
-                <div className="d-flex flex-row">
-                  <div className="w-50 border-end border-dark">Date</div>
+            <li key={idx} className="mt-2 border border-dark me-4 text-white-50">
+              <div className="match-table">
+                <div className="d-flex">
+                  <div className="text-center ms-4 mb-4 mt-4 me-4 w-50">
+                    <h1 className="border-bottom border-dark">{playerA} vs {playerB}</h1>
+                    <div className="d-flex flex-row">
+                      <div className="w-50 border-end border-dark">Date</div>
+                      <div className="w-50">{set.date.slice(5)}-{set.date.slice(2, 4)}</div>
+                    </div>
+
+                    <div className="d-flex flex-row">
+                      <div className="w-50 border-end border-dark">W</div>
+                      <div className="w-50">{Math.max(p1WinTotal, p2WinTotal)}</div>
+                    </div>
+
+                    <div className="d-flex flex-row">
+                      <div className="w-50 border-end border-dark">L</div>
+                      <div className="w-50">{Math.min(p1WinTotal, p2WinTotal)}</div>
+                    </div>
+
+                    <div className="d-flex flex-row">  
+                      <div className="w-50 border-bottom border-end border-dark">Result</div>
+                      <div className="w-50 border-bottom border-dark">{playerWin ? "Win" : "Loss"}</div>
+                    </div>
+                  </div>
+
+                  <div className="w-50 d-flex justify-content-center">
+                    <iframe className="pt-3 pb-3" title={"match-"+{idx}} width={IFRAME_WIDTH} height={IFRAME_HEIGHT} 
+                    src={"https://www.youtube.com/embed/"+set.link}>
+                    </iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div className="match-table-responsive">
+                <h1 className="text-center">{playerA} vs {playerB}</h1>
+
+                <div className="d-flex">
+                  <iframe className="w-100" title={"match-"+{idx}} width={IFRAME_WIDTH} height={IFRAME_HEIGHT} 
+                  src={"https://www.youtube.com/embed/"+set.link}>
+                  </iframe>
+                </div>
+
+                <div className=" d-flex flex-row text-center">
+                  <div className="w-50">Date</div>
                   <div className="w-50">{set.date.slice(5)}-{set.date.slice(2, 4)}</div>
                 </div>
 
-                <div className="d-flex flex-row">
-                  <div className="w-50 border-end border-dark">W</div>
-                  <div className="w-50">{Math.max(p1WinTotal, p2WinTotal)}</div>
+                <div className=" d-flex flex-row text-center">
+                  <div className="w-50">W-L</div>
+                  <div className="w-50">{Math.max(p1WinTotal, p2WinTotal)} - {Math.min(p1WinTotal, p2WinTotal)}</div>
                 </div>
 
-                <div className="d-flex flex-row">
-                  <div className="w-50 border-end border-dark">L</div>
-                  <div className="w-50">{Math.min(p1WinTotal, p2WinTotal)}</div>
-                </div>
-
-                <div className="d-flex flex-row">  
-                  <div className="w-50 border-end border-dark">Result</div>
+                <div className=" d-flex flex-row text-center">
+                  <div className="w-50">Result</div>
                   <div className="w-50">{playerWin ? "Win" : "Loss"}</div>
                 </div>
-              </div>
-              <div className="w-50 d-flex justify-content-center">
-                <iframe className="pt-3 pb-3" title={"match-"+{idx}} width={IFRAME_WIDTH} height={IFRAME_HEIGHT} 
-                src={"https://www.youtube.com/embed/"+set.link}>
-                </iframe>
               </div>
             </li>
           );
