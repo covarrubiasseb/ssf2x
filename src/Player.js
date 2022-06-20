@@ -28,12 +28,12 @@ const Player = (props) => {
     <div className="Player text-white border border-dark ms-3 me-3">
       <div className="d-flex border-bottom border-dark">
         <img className="ms-1" src={"./img/"+data.state.characterKey+".png"} alt="character-icon"/>
-        <h1 className="ms-2 text-black">{data.state.name}</h1>
+        <h1 className="ms-2 text-white-50">{data.state.name}</h1>
       </div>
 
       <div className="ms-5 me-5 mt-4">
         <table className="table border-dark">
-          <thead className="text-black">
+          <thead className="text-white-50">
             <tr>
               <th scope="col"><em className="rank-responsive">Rank</em></th>
               <th className="win-responsive" scope="col"><em>W</em></th>
@@ -42,7 +42,7 @@ const Player = (props) => {
               <th scope="col"><em>Rating(ELO)</em></th>
             </tr>
           </thead>
-          <tbody className="text-black">
+          <tbody className="text-white-50">
             <tr>
               <td>{data.state.rank}</td>
               <td>{data.state.win}</td>
@@ -54,7 +54,7 @@ const Player = (props) => {
         </table>
       </div>
 
-      <ul><h1 className="text-black text-center">Match History</h1> {
+      <ul><h1 className="text-white-50 text-center">Match History</h1> {
         sets.map((set, idx) => {
           let playerA = data.state.data.players[set.players['0']];
           let playerB = data.state.data.players[set.players['1']];
@@ -87,13 +87,25 @@ const Player = (props) => {
             }
           }
           return (
-            <li key={idx} className="d-flex justify-content-around mt-2 border border-dark pt-2 pb-2 me-4">
-              <div className="text-black bg-transparent border-none">
-                <h3 class="text-center card-title">{playerA} vs {playerB}</h3>
-                <p class="card-text">Date: {set.date}</p>
-                <p class="card-text">Set Count: {Math.max(p1WinTotal, p2WinTotal)} - {Math.min(p1WinTotal, p2WinTotal)}</p>
-                <p class="card-text">Result: {playerWin ? "Win" : "Loss"}</p>
+            <li key={idx} className="d-flex justify-content-around mt-2 border border-dark pt-2 pb-2 me-4 text-white-50">
+              <div className="text-center mt-4">
+                <h1>{playerA} vs {playerB}</h1>
+                <div className="d-flex flex-row border border-dark">
+                  <div className="flex-fill">W</div>
+                  <div className="flex-fill text-black">{Math.max(p1WinTotal, p2WinTotal)}</div>
+                </div>
+
+                <div className="d-flex flex-row">
+                  <div className="flex-fill">L</div>
+                  <div className="flex-fill text-black">{Math.min(p1WinTotal, p2WinTotal)}</div>
+                </div>
+
+                <div className="d-flex flex-row border border-dark">  
+                  <div className="flex-fill">Result</div>
+                  <div className="flex-fill text-black">{playerWin ? "Win" : "Loss"}</div>
+                </div>
               </div>
+
               <iframe title={"match-"+{idx}} width={IFRAME_WIDTH} height={IFRAME_HEIGHT} 
               src={"https://www.youtube.com/embed/"+set.link}>
               </iframe>

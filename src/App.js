@@ -6,9 +6,6 @@ import Main from './Main.js';
 import Player from './Player.js';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
@@ -16,7 +13,7 @@ class App extends React.Component {
         <header className="App-header ms-5 me-5"></header>
 
         <div className="d-flex justify-content-center">
-          <img className="img img-fluid mt-5" src={title} alt="2X Logo"/>
+          <img className="img img-fluid img-2x-logo" src={title} alt="2X Logo"/>
         </div>
 
         <svg height="0px" width="0px">

@@ -41,9 +41,12 @@ class Main extends React.Component {
   render() {
     return (
       <div className="Main">
+        <h1 className="text-center text-white-50 display-1"><em>
+          Super Street Fighter II X Rankings</em>
+        </h1>
         <div className="table-responsive">
           <table className="table table-hover border-dark text-white-50">
-            <thead className="text-black">
+            <thead className="text-white-50">
               <tr>
                 <th className="text-center" scope="col"><em className="rank-responsive">Rank</em></th>
                 <th className="text-center" scope="col"><em>Player</em></th>
@@ -80,13 +83,13 @@ class Main extends React.Component {
                       </td>
 
                       <td className="win-responsive">
-                        <div className="mt-1 text-center text-black bg-gradient rounded-pill ps-1 pe-1">
+                        <div className="mt-1 text-center ps-1 pe-1">
                           <em>{player.win}</em>
                         </div>
                       </td>
 
                       <td className="loss-responsive">
-                        <div className="mt-1 text-center text-black bg-gradient rounded-pill ps-1 pe-1">
+                        <div className="mt-1 text-center ps-1 pe-1">
                           <em>{player.loss}</em>
                         </div>
                       </td>
@@ -99,7 +102,7 @@ class Main extends React.Component {
                             <text x="20%" y="80%" fill="#DDD" transform="skewX(-10) scale(0.55 0.55)">{winPercent}%</text>
                           </g>
                         </svg>
-                        <div className="svg-responsive mt-1 text-center bg-gradient rounded-pill"><em>{winPercent}%</em></div>
+                        <div className="svg-responsive mt-1 text-center"><em>{winPercent}%</em></div>
                       </td>
 
                       <td>
@@ -111,7 +114,7 @@ class Main extends React.Component {
                           </g>
                         </svg>
 
-                        <div className="svg-responsive mt-1 text-center text-black bg-gradient rounded-pill"><em>{player.score}</em></div>
+                        <div className="svg-responsive mt-1 text-center"><em>{player.score}</em></div>
                       </td>
                     </tr>
                   );
