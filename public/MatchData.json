@@ -82,7 +82,25 @@
     "79": "8Doors",
     "80": "Tenchin",
     "81": "Isaji",
-    "82": "Fujinuma"
+    "82": "Fujinuma",
+    "83": "Otochun",
+    "84": "Gunze",
+    "85": "Tamashima",
+    "86": "Hakase",
+    "87": "Yondaime",
+    "88": "Futachan",
+    "89":"MAO",
+    "90": "Koemon",
+    "91": "Kameraya",
+    "92": "Nakano",
+    "93": "kenta-kobe",
+    "94": "Teppei",
+    "95": "Inomata",
+    "96": "Gotoh",
+    "97":"Opemai",
+    "98": "Kawasim",
+    "99": "Alabama",
+    "100": "Hazi"
   },
 
   "characters": {
@@ -745,6 +763,278 @@
       "characters": ["10", "15"],
       "score": [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       "date": "2021-02-12"
+    },
+
+    "78": {
+      "link": "rj5n8HWi-kM",
+      "players": ["83", "5"],
+      "characters": ["3", "11"],
+      "score": [1, 0, 0, 0, 0, 1, 0],
+      "date": "2018-01-05"
+    },
+
+    "79": {
+      "link": "jKUKNGz3jrI",
+      "players": ["84", "5"],
+      "characters": ["5", "11"],
+      "score": [1, 0, 0, 1, 0, 1, 0, 1, 0],
+      "date": "2018-01-08"
+    },
+
+    "80": {
+      "link": "i0tziQwoQKo",
+      "players": ["85", "86"],
+      "characters": ["12", "7"],
+      "score": [0, 1, 0, 0, 0, 0],
+      "date": "2018-12-17"
+    },
+
+    "81": {
+      "link": "CaMwHS1bL90",
+      "players": ["0", "10"],
+      "characters": ["6", "3"],
+      "score": [1, 0, 0, 1, 1, 1, 0, 1],
+      "date": "2019-08-06"
+    },
+
+    "82": {
+      "link": "Ued-3yxpfoI",
+      "players": ["86", "87"],
+      "characters": ["7", "30"],
+      "score": [0, 0, 1, 1, 1, 0, 1, 1],
+      "date": "2019-01-08"
+    },
+
+    "83": {
+      "link": "g_WAZcocp3w",
+      "players": ["86", "5"],
+      "characters": ["7", "11"],
+      "score": [1, 0, 1, 0, 1, 0, 0, 1, 1],
+      "date": "2019-03-26"
+    },
+
+    "84": {
+      "link": "04kx7SozRjQ",
+      "players": ["54", "86"],
+      "characters": ["3", "7"],
+      "score": [0, 0, 1, 0, 1, 0, 1, 0],
+      "date": "2018-12-10"
+    },
+
+    "85": {
+      "link": "U-lsiFMqync",
+      "players": ["88", "87"],
+      "characters": ["0", "30"],
+      "score": [0, 0, 1, 0, 0, 1, 1, 0],
+      "date": "2018-08-16"
+    },
+
+    "86": {
+      "link": "IwvYVwVxJVs",
+      "players": ["89", "4"],
+      "characters": ["13", "15"],
+      "score": [1, 1, 1, 0, 0, 1, 1],
+      "date": "2020-03-05"
+    },
+
+    "87": {
+      "link": "PNN8szgp05s",
+      "players": ["7", "87"],
+      "characters": ["15", "30"],
+      "score": [0, 0, 1, 0, 1, 0, 0],
+      "date": "2019-11-18"
+    },
+
+    "88": {
+      "link": "HUB03NC7r40",
+      "players": ["90", "89"],
+      "characters": ["10", "13"],
+      "score": [1, 1, 0, 0, 0, 0, 0],
+      "date": "2019-09-11"
+    },
+
+    "89": {
+      "link": "dQyiTSedxt0",
+      "players": ["86", "89"],
+      "characters": ["7", "13"],
+      "score": [0, 1, 0, 0, 0, 0],
+      "date": "2018-11-25"
+    },
+
+    "90": {
+      "link": "WOYeCHNtN3o",
+      "players": ["22", "91"],
+      "characters": ["1", "1"],
+      "score": [0, 0, 1, 1, 1, 1, 0, 1],
+      "date": "2019-09-28"
+    },
+
+    "91": {
+      "link": "EA3U6mZgdO4",
+      "players": ["86", "25"],
+      "characters": ["7", "1"],
+      "score": [1, 0, 1, 1, 1, 1],
+      "date": "2020-03-03"
+    },
+
+    "92": {
+      "link": "xC2kS0WDtTs",
+      "players": ["14", "84"],
+      "characters": ["8", "5"],
+      "score": [0, 0, 1, 1, 1, 0, 0, 1, 0],
+      "date": "2019-12-16"
+    },
+
+    "93": {
+      "link": "iNgQDJV547Q",
+      "players": ["6", "25"],
+      "characters": ["18", "1"],
+      "score": [0, 0, 0, 1, 0, 1, 1, 0],
+      "date": "2020-03-15"
+    },
+
+    "94": {
+      "link": "GtBQs2MTl0Y",
+      "players": ["88", "9"],
+      "characters": ["0", "2"],
+      "score": [1, 0, 1, 1, 1, 1],
+      "date": "2019-03-01"
+    },
+
+    "95": {
+      "link": "2pWkClbrQnI",
+      "players": ["92", "59"],
+      "characters": ["9", "24"],
+      "score": [0, 0, 1, 0, 1, 0, 0],
+      "date": "2019-07-09"
+    },
+
+    "96": {
+      "link": "eGnbq5cnIME",
+      "players": ["89", "93"],
+      "characters": ["13", "2"],
+      "score": [0, 1, 1, 1, 0, 0, 0, 1, 0],
+      "date": "2018-01-08"
+    },
+
+    "97": {
+      "link": "8kINkckXQV0",
+      "players": ["94", "95"],
+      "characters": ["6", "8"],
+      "score": [0, 0, 1, 1, 1, 1, 1],
+      "date": "2019-12-08"
+    },
+
+    "98": {
+      "link": "80GD4mHZ6wA",
+      "players": ["96", "12"],
+      "characters": ["0", "3"],
+      "score": [0, 0, 1, 1, 1, 1, 1],
+      "date": "2018-05-09"
+    },
+
+    "99": {
+      "link": "Y9tv_-8sBkY",
+      "players": ["97", "87"],
+      "characters": ["13", "30"],
+      "score": [0, 1, 1, 0, 1, 0, 1, 1],
+      "date": "2018-11-13"
+    },
+
+    "100": {
+      "link": "jczQiNfNNb8",
+      "players": ["4", "5"],
+      "characters": ["15", "11"],
+      "score": [0, 0, 1, 0, 0, 0],
+      "date": "2020-03-12"
+    },
+
+    "101": {
+      "link": "W2BtD8YS83w",
+      "players": ["9", "94"],
+      "characters": ["2", "6"],
+      "score": [0, 0, 0, 1, 1, 1, 1, 0, 0],
+      "date": "2019-10-11"
+    },
+
+    "102": {
+      "link": "HDYPJQdmlKo",
+      "players": ["98", "4"],
+      "characters": ["7", "15"],
+      "score": [1, 1, 0, 1, 0, 1, 0, 1],
+      "date": "2020-03-07"
+    },
+
+    "103": {
+      "link": "ytFza9-_zQU",
+      "players": ["49", "84"],
+      "characters": ["14", "5"],
+      "score": [0, 0, 0, 1, 0, 0],
+      "date": "2019-10-28"
+    },
+
+    "104": {
+      "link": "v_-wWjFuItw",
+      "players": ["12", "5"],
+      "characters": ["3", "11"],
+      "score": [1, 1, 0, 1, 0, 1, 0, 1],
+      "date": "2019-09-02"
+    },
+
+    "105": {
+      "link": "GSYT5MUrxaQ",
+      "players": ["99", "100"],
+      "characters": ["12", "11"],
+      "score": [1, 0, 0, 0, 0, 1, 0],
+      "date": "2019-09-18"
+    },
+
+    "106": {
+      "link": "RNGoNdDputs",
+      "players": ["50", "88"],
+      "characters": ["1", "0"],
+      "score": [0, 0, 0, 0, 0],
+      "date": "2019-07-29"
+    },
+
+    "107": {
+      "link": "DezMZ6saMnE",
+      "players": ["86", "9"],
+      "characters": ["7", "2"],
+      "score": [1, 0, 1, 1, 0, 1, 1],
+      "date": "2019-10-11"
+    },
+
+    "108": {
+      "link": "go1VbqMihb0",
+      "players": ["86", "97"],
+      "characters": ["7", "13"],
+      "score": [1, 1, 1, 0, 0, 1, 0, 1],
+      "date": "2019-02-11"
+    },
+
+    "109": {
+      "link": "MwBYDLmsAeY",
+      "players": ["89", "6"],
+      "characters": ["13", "18"],
+      "score": [1, 1, 0, 1, 1, 1],
+      "date": "2020-03-08"
+    },
+
+    "110": {
+      "link": "NOjVZp9aaCQ",
+      "players": ["86", "33"],
+      "characters": ["11", "30"],
+      "score": [1, 0, 0, 1, 0, 1, 1, 1],
+      "date": "2020-01-19"
+    },
+
+    "111": {
+      "link": "EUUs6MOCg",
+      "players": ["85", "89"],
+      "characters": ["12", "13"],
+      "score": [0, 0, 0, 0, 1, 0],
+      "date": "2020-04-05"
     }
   }
 }
