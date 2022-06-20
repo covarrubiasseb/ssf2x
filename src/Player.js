@@ -31,7 +31,7 @@ const Player = (props) => {
         <h1 className="ms-2 text-white-50 mt-auto">{data.state.name}</h1>
       </div>
 
-      <div className="ms-5 me-5 mt-4">
+      <div className="ms-5 me-5 mt-4 player-info">
         <table className="table border-dark">
           <thead className="text-white-50">
             <tr>
@@ -52,6 +52,34 @@ const Player = (props) => {
             </tr>
           </tbody>
         </table>
+      </div>
+
+      <div className="player-info-responsive text-center text-white-50">
+        <div className="d-flex flex-row">
+          <div className="w-50"><em>Rank</em></div>
+          <div className="w-50">{data.state.rank}</div>
+        </div>
+
+        <div className="d-flex flex-row">
+          <div className="w-50"><em>W</em></div>
+          <div className="w-50">{data.state.win}</div>
+        </div>
+
+        <div className="d-flex flex-row">
+          <div className="w-50"><em>L</em></div>
+          <div className="w-50">{data.state.loss}</div>
+        </div>
+
+        <div className="d-flex flex-row">
+          <div className="w-50"><em>Win%</em></div>
+          <div className="w-50">{data.state.winPercent}</div>
+        </div>
+
+        <div className="d-flex flex-row">
+          <div className="w-50"><em>Rating</em></div>
+          <div className="w-50">{data.state.score}</div>
+        </div>
+        
       </div>
 
       <ul><h1 className="text-white-50 text-center">Match History</h1> {
@@ -87,33 +115,34 @@ const Player = (props) => {
             }
           }
           return (
-            <li key={idx} className="d-flex justify-content-around mt-2 border border-dark pt-2 pb-2 me-4 text-white-50 match-table-responsive">
-              <div className="text-center mt-4">
-                <h1>{playerA} vs {playerB}</h1>
-                <div className="d-flex flex-row border border-dark">
-                  <div className="w-50">Date</div>
-                  <div className="w-50">{set.date}</div>
+            <li key={idx} className="d-flex mt-2 border border-dark me-4 text-white-50 match-table-responsive">
+              <div className="text-center ms-4 mb-4 mt-4 me-4 w-50">
+                <h1 className="border-bottom border-dark">{playerA} vs {playerB}</h1>
+                <div className="d-flex flex-row">
+                  <div className="w-50 border-end border-dark">Date</div>
+                  <div className="w-50">{set.date.slice(5)}-{set.date.slice(2, 4)}</div>
                 </div>
 
                 <div className="d-flex flex-row">
-                  <div className="w-50">W</div>
+                  <div className="w-50 border-end border-dark">W</div>
                   <div className="w-50">{Math.max(p1WinTotal, p2WinTotal)}</div>
                 </div>
 
-                <div className="d-flex flex-row border border-dark">
-                  <div className="w-50">L</div>
+                <div className="d-flex flex-row">
+                  <div className="w-50 border-end border-dark">L</div>
                   <div className="w-50">{Math.min(p1WinTotal, p2WinTotal)}</div>
                 </div>
 
                 <div className="d-flex flex-row">  
-                  <div className="w-50">Result</div>
+                  <div className="w-50 border-end border-dark">Result</div>
                   <div className="w-50">{playerWin ? "Win" : "Loss"}</div>
                 </div>
               </div>
-
-              <iframe title={"match-"+{idx}} width={IFRAME_WIDTH} height={IFRAME_HEIGHT} 
-              src={"https://www.youtube.com/embed/"+set.link}>
-              </iframe>
+              <div className="w-50 d-flex justify-content-center">
+                <iframe className="pt-3 pb-3" title={"match-"+{idx}} width={IFRAME_WIDTH} height={IFRAME_HEIGHT} 
+                src={"https://www.youtube.com/embed/"+set.link}>
+                </iframe>
+              </div>
             </li>
           );
         })
