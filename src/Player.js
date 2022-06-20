@@ -121,7 +121,11 @@ const Player = (props) => {
               <div className="match-table">
                 <div className="d-flex">
                   <div className="text-center ms-4 mb-4 mt-4 me-4 w-50">
-                    <h1 className="border-bottom border-dark">{playerA} vs {playerB}</h1>
+                    <h1 className="border-bottom border-dark d-flex">
+                      <img className="flex-shrink-1" src={"./img/"+set.characters['0']+".png"} alt="character icon"/>
+                      <div className="flex-grow-1">{playerA} vs {playerB}</div>
+                      <img className="flex-shrink-1" src={"./img/"+set.characters['1']+".png"} alt="character icon"/>
+                    </h1>
                     <div className="d-flex flex-row">
                       <div className="w-50 border-end border-dark">Date</div>
                       <div className="w-50">{set.date.slice(5)}-{set.date.slice(2, 4)}</div>
@@ -151,7 +155,11 @@ const Player = (props) => {
               </div>
 
               <div className="match-table-responsive">
-                <h1 className="text-center pt-2 ps-1 pe-1">{playerA} vs {playerB}</h1>
+                <h1 className="text-center pt-2 ps-1 pe-1 d-flex">
+                  <img className="flex-shrink-1" src={"./img/"+set.characters['0']+".png"} alt="character icon"/>
+                  <div className="flex-grow-1">{playerA} vs {playerB}</div>
+                  <img className="flex-shrink-1" src={"./img/"+set.characters['1']+".png"} alt="character icon"/>
+                </h1>
 
                 <div className="d-flex">
                   <iframe className="w-100" title={"match-"+{idx}} width={IFRAME_WIDTH} height={IFRAME_HEIGHT} 
