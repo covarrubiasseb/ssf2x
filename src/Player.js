@@ -125,7 +125,7 @@ const Player = (props) => {
                       <div className="w-50 border-end border-dark">Opponent</div>
                       <div className="w-50">
                         {isp1 ? playerB : playerA}
-                        <img className="flex-shrink-1" src={isp1 ? "./img/"+set.characters['1']+".png" : "./img/"+set.characters['0']+".png"} alt="character icon"/>
+                        <img className="ps-2" src={isp1 ? "./img/"+set.characters['1']+".png" : "./img/"+set.characters['0']+".png"} alt="character icon"/>
                       </div>
                       
                     </h1>
