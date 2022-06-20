@@ -122,9 +122,12 @@ const Player = (props) => {
                 <div className="d-flex">
                   <div className="text-center ms-4 mb-4 mt-4 me-4 w-50">
                     <h1 className="border-bottom border-dark d-flex">
-                      <img className="flex-shrink-1" src={"./img/"+set.characters['0']+".png"} alt="character icon"/>
-                      <div className="flex-grow-1">{playerA} vs {playerB}</div>
-                      <img className="flex-shrink-1" src={"./img/"+set.characters['1']+".png"} alt="character icon"/>
+                      <div className="w-50 border-end border-dark">Opponent</div>
+                      <div className="w-50">
+                        {isp1 ? playerB : playerA}
+                        <img className="flex-shrink-1" src={isp1 ? "./img/"+set.characters['1']+".png" : "./img/"+set.characters['0']+".png"} alt="character icon"/>
+                      </div>
+                      
                     </h1>
                     <div className="d-flex flex-row">
                       <div className="w-50 border-end border-dark">Date</div>
@@ -155,10 +158,8 @@ const Player = (props) => {
               </div>
 
               <div className="match-table-responsive">
-                <h1 className="text-center pt-2 ps-1 pe-1 d-flex">
-                  <img className="flex-shrink-1" src={"./img/"+set.characters['0']+".png"} alt="character icon"/>
-                  <div className="flex-grow-1">{playerA} vs {playerB}</div>
-                  <img className="flex-shrink-1" src={"./img/"+set.characters['1']+".png"} alt="character icon"/>
+                <h1 className="text-center pt-2 ps-1 pe-1">
+                  {playerA}({data.state.data.characters[set.characters['0']]}) vs {playerB}({data.state.data.characters[set.characters['1']]})
                 </h1>
 
                 <div className="d-flex">
