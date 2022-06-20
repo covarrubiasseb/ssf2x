@@ -28,7 +28,7 @@ const Player = (props) => {
     <div className="Player text-white border border-dark ms-3 me-3">
       <div className="d-flex border-bottom border-dark">
         <img className="ms-1" src={"./img/"+data.state.characterKey+".png"} alt="character-icon"/>
-        <h1 className="ms-2 text-white-50">{data.state.name}</h1>
+        <h1 className="ms-2 text-white-50 mt-auto">{data.state.name}</h1>
       </div>
 
       <div className="ms-5 me-5 mt-4">
@@ -87,22 +87,27 @@ const Player = (props) => {
             }
           }
           return (
-            <li key={idx} className="d-flex justify-content-around mt-2 border border-dark pt-2 pb-2 me-4 text-white-50">
+            <li key={idx} className="d-flex justify-content-around mt-2 border border-dark pt-2 pb-2 me-4 text-white-50 match-table-responsive">
               <div className="text-center mt-4">
                 <h1>{playerA} vs {playerB}</h1>
                 <div className="d-flex flex-row border border-dark">
-                  <div className="flex-fill">W</div>
-                  <div className="flex-fill text-black">{Math.max(p1WinTotal, p2WinTotal)}</div>
+                  <div className="w-50">Date</div>
+                  <div className="w-50">{set.date}</div>
                 </div>
 
                 <div className="d-flex flex-row">
-                  <div className="flex-fill">L</div>
-                  <div className="flex-fill text-black">{Math.min(p1WinTotal, p2WinTotal)}</div>
+                  <div className="w-50">W</div>
+                  <div className="w-50">{Math.max(p1WinTotal, p2WinTotal)}</div>
                 </div>
 
-                <div className="d-flex flex-row border border-dark">  
-                  <div className="flex-fill">Result</div>
-                  <div className="flex-fill text-black">{playerWin ? "Win" : "Loss"}</div>
+                <div className="d-flex flex-row border border-dark">
+                  <div className="w-50">L</div>
+                  <div className="w-50">{Math.min(p1WinTotal, p2WinTotal)}</div>
+                </div>
+
+                <div className="d-flex flex-row">  
+                  <div className="w-50">Result</div>
+                  <div className="w-50">{playerWin ? "Win" : "Loss"}</div>
                 </div>
               </div>
 

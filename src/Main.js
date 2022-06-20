@@ -64,7 +64,7 @@ class Main extends React.Component {
                     <tr key={idx}>
                       <th scope="row"><span className="ps-3 pe-3">{idx+1}</span></th>
                       <td>
-                        <Link to="/player" className="text-white player-profile-link" state={
+                        <Link to="/player" className="text-white-50 player-profile-link" state={
                           {
                             data: this.state.data,
                             name: player.name,
@@ -78,7 +78,7 @@ class Main extends React.Component {
                           }
                         }>
                           <img className="me-4 img img-fluid icon-responsive" src={"./img/"+player.characterKey+".png"} alt="character icon"/>
-                          <span className="text-responsive text-black">{player.name}</span>
+                          <span className="text-responsive">{player.name}</span>
                         </Link>
                       </td>
 

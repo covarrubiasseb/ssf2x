@@ -12,9 +12,9 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header ms-5 me-5"></header>
 
-        <div className="d-flex justify-content-center">
+        {/*<div>
           <img className="img img-fluid img-2x-logo" src={title} alt="2X Logo"/>
-        </div>
+        </div>*/}
 
         <svg height="0px" width="0px">
           <defs>
