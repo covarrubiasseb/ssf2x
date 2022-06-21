@@ -41,7 +41,7 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div className="Main d-flex flex-column align-items-center mt-5 mb-5">
+      <main className="Main d-flex flex-column align-items-center mt-5 mb-5">
         <h1 className="text-center text-white-50 display-1 mt-5">
           <em>Super Street Fighter II X Rankings</em>
         </h1>
@@ -118,7 +118,7 @@ class Main extends React.Component {
             </tbody>
           </table>
         </div>
-      </div>
+      </main>
     );
   }
 }
