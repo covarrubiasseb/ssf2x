@@ -78,9 +78,9 @@ const Player = (props) => {
         </div>   
       </div>
 
-      <h1 className="text-white-50 text-center display-2"><em>Match History</em></h1>
+      <h1 className="text-white-50 text-center display-2 mt-5"><em>Match History</em></h1>
 
-      <div className="table-responsive bg-table">
+      <div className="table-responsive bg-table mt-4">
         <table className="table table-hover text-black text-center border-dark">
           <thead>
             <tr>
@@ -146,7 +146,7 @@ const Player = (props) => {
                     <td className="result-responsive">{playerWin ? "Win" : "Loss"}</td>
                     <td>
                       <a href={"https://youtu.be/"+set.link} target="_blank">
-                        <img className="video-icon-responsive" width="64" src="./img/video-icon.png" alt="video url icon"/>
+                        <img className="video-icon-responsive" width="48" src="./img/video-icon.png" alt="video url icon"/>
                       </a>
                     </td>
                   </tr>
