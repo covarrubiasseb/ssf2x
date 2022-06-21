@@ -22,15 +22,15 @@ const Player = (props) => {
   });
 
   return (
-    <div className="Player text-white border border-dark ms-3 me-3">
+    <div className="Player text-white ms-3 me-3">
       <div className="d-flex border-bottom border-dark">
         <img className="ms-1" src={"./img/"+data.state.characterKey+".png"} alt="character-icon"/>
         <h1 className="ms-2 text-white-50 mt-auto">{data.state.name}</h1>
       </div>
 
-      <div className="ms-5 me-5 mt-4 player-info">
-        <table className="table border-dark">
-          <thead className="text-white-50">
+      <div className="ms-5 me-5 mt-4 player-info bg-table">
+        <table className="table border-dark text-black">
+          <thead>
             <tr>
               <th scope="col"><em className="rank-responsive">Rank</em></th>
               <th className="win-responsive" scope="col"><em>W</em></th>
@@ -39,7 +39,7 @@ const Player = (props) => {
               <th scope="col"><em>Rating(ELO)</em></th>
             </tr>
           </thead>
-          <tbody className="text-white-50">
+          <tbody>
             <tr>
               <td>{data.state.rank}</td>
               <td>{data.state.win}</td>
@@ -80,8 +80,8 @@ const Player = (props) => {
 
       <h1 className="text-white-50 text-center display-2"><em>Match History</em></h1>
 
-      <div className="table-responsive">
-        <table className="table table-hover text-white-50 text-center border-dark">
+      <div className="table-responsive bg-table">
+        <table className="table table-hover text-black text-center border-dark">
           <thead>
             <tr>
               <th scope="col"><em></em></th>

@@ -58,10 +58,6 @@
     display: block;
   }
 
-  th, td {
-    border: 1px solid black;
-  }
-
   .icon-responsive {
     float: right;
   }
@@ -107,10 +103,6 @@
   }
 
   .player-info {
-    display: none;
-  }
-
-  .match-table {
     display: none;
   }
 
