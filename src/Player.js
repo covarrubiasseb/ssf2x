@@ -30,7 +30,7 @@ const Player = (props) => {
           <h1 className="ms-2 mt-auto display-6">{data.state.name}</h1>
         </div>
 
-        <table className="table border-dark">
+        <table className="table table-borderless">
           <thead>
             <tr>
               <th scope="col"><em className="rank-responsive">Rank</em></th>
@@ -87,14 +87,13 @@ const Player = (props) => {
       <h1 className="text-white-50 text-center display-2 mt-5"><em>Match History</em></h1>
 
       <div className="table-responsive bg-table mt-4 border border-dark border-2 shadow-lg">
-        <table className="table table-hover text-black border-dark">
+        <table className="table table-hover table-bordered text-black border-dark">
           <thead className="bg-dark text-white-50">
             <tr>
               <th scope="col"><em></em></th>
               <th scope="col"><em>Opponent</em></th>
               <th scope="col" className="text-center"><em>Date</em></th>
-              <th scope="col"><em>W</em></th>
-              <th scope="col"><em>L</em></th>
+              <th scope="col"><em>W-L</em></th>
               <th className="result-responsive" scope="col"><em>Result</em></th>
               <th scope="col"><em className="thead-link-responsive">link</em></th>
             </tr>
@@ -174,8 +173,9 @@ const Player = (props) => {
                     </td>
                     <td className="date">{set.date.slice(5, 7)}/{set.date.slice(8, 10)}/{set.date.slice(2, 4)}</td>
                     <td className="date-responsive">{set.date.slice(5, 7)}/{set.date.slice(2, 4)}</td>
-                    <td>{isp1 ? p1WinTotal : p2WinTotal}</td>
-                    <td>{!isp1 ? p1WinTotal : p2WinTotal}</td>
+                    <td className="border-dark">
+                      {isp1 ? p1WinTotal : p2WinTotal}-{!isp1 ? p1WinTotal : p2WinTotal}
+                    </td>
                     <td className="result-responsive">{playerWin ? "Win" : "Loss"}</td>
                     <td>
                       <a href={"https://youtu.be/"+set.link} target="_blank">
