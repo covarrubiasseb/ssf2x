@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import SortDate from './SortDate.js';
 
 const Player = (props) => {
@@ -102,6 +103,7 @@ const Player = (props) => {
                 let p2WinTotal = 0;
                 let playerWin;
                 let isp1;
+                let otherPlayerData;
 
                 let p1WinTotal = set.score.reduce((curr, acc) => {
                   return curr + acc;
@@ -114,7 +116,7 @@ const Player = (props) => {
                 });
 
                 if (data.state.playerKey === set.players[0]) {
-                  // player is P1
+                  // player is A
                   isp1 = true;
                   if (p1WinTotal > (set.score.length / 2)) {
                     playerWin = true;
@@ -122,7 +124,7 @@ const Player = (props) => {
                     playerWin = false;
                   }
                 } else {
-                  // player is P2
+                  // player is B
                   isp1 = false;
                   if (p1WinTotal > (set.score.length / 2)) {
                     playerWin = false;
@@ -131,11 +133,37 @@ const Player = (props) => {
                   }
                 }
 
+                if (isp1) {
+                  // Player is A
+                  otherPlayerData = data.state.rankings.filter((player) => {
+                      return set.players['1'] === player.playerKey;
+                  });
+
+                } else {
+                  // Player is B
+                  otherPlayerData = data.state.rankings.filter((player) => {
+                      return set.players['0'] === player.playerKey;
+                  });
+                }
+
                 return (
                   <tr key={idx}>
                     <th scope="row"><em>{idx + 1}</em></th>
                     <td>
-                      {isp1 ? playerB : playerA}
+                      <Link to="/player" className="text-black player-profile-link" state={
+                        {
+                          data: data.state.data,
+                          rankings: data.state.rankings,
+                          name: otherPlayerData[0].name,
+                          score: otherPlayerData[0].score,
+                          rank: otherPlayerData[0].rank,
+                          playerKey: otherPlayerData[0].playerKey,
+                          characterKey: otherPlayerData[0].characterKey,
+                          win: otherPlayerData[0].win,
+                          loss: otherPlayerData[0].loss,
+                          winPercent: otherPlayerData[0].winPercent
+                        }
+                      }>{isp1 ? playerB : playerA}</Link>
                       <img className="ps-2 img-fluid icon-responsive" 
                       src={isp1 ? "./img/"+set.characters['1']+".png" : "./img/"+set.characters['0']+".png"} alt="character icon"/>
                     </td>

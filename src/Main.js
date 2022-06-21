@@ -66,6 +66,7 @@ class Main extends React.Component {
                         <Link to="/player" className="text-black player-profile-link" state={
                           {
                             data: this.state.data,
+                            rankings: this.state.rankings,
                             name: player.name,
                             score: player.score,
                             rank: idx + 1,
