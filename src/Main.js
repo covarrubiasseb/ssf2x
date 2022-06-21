@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CalcRankings from './CalcRankings.js';
 
-const RATINGS_BAR_CURVE = 2000;
+const RATINGS_BAR_CURVE = 2100;
 const WINPERCENT_BAR_TO_WINDOW_WIDTH_RATIO = 16;
 const RATINGS_BAR_TO_WINDOW_WIDTH_RATIO = 3;
 const RATINGS_BAR_TEXT_RATIO = 4;
