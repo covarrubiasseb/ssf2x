@@ -53,7 +53,7 @@ const Player = (props) => {
       </div>
 
       <div className="player-info-responsive text-center text-white-50">
-        <div className="d-flex mt-3 justify-content-center flex-row">
+        <div className="d-flex mt-5 justify-content-center flex-row">
           <img className="ms-1" src={"./img/"+data.state.characterKey+".png"} alt="character-icon"/>
           <h1 className="ms-2 mt-auto display-6">{data.state.name}</h1>
         </div>
