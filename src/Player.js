@@ -22,6 +22,9 @@ const Player = (props) => {
     return data.state.data.sets[set.matchKey];
   });
 
+  let winPercent = Math.round(data.state.win / (data.state.win + data.state.loss) * 100);
+  let setWinPercent = Math.round(data.state.setWin / (data.state.setWin + data.state.setLoss) * 100);
+
   return (
     <div className="Player d-flex flex-column align-items-center text-black mt-5 mb-5">
       <div className="ms-5 me-5 mt-4 player-info bg-table text-center border border-dark border-2 shadow-lg">
@@ -35,6 +38,9 @@ const Player = (props) => {
             <tr>
               <th scope="col"><em className="rank-responsive">Rank</em></th>
               <th scope="col"><em>Rating(ELO)</em></th>
+              <th className="win-responsive" scope="col"><em>SetW</em></th>
+              <th className="loss-responsive" scope="col"><em>L</em></th>
+              <th scope="col"><em>SetWin%</em></th>
               <th className="win-responsive" scope="col"><em>W</em></th>
               <th className="loss-responsive" scope="col"><em>L</em></th>
               <th scope="col"><em>Win%</em></th>
@@ -44,9 +50,12 @@ const Player = (props) => {
             <tr>
               <td>{data.state.rank}</td>
               <td>{data.state.score}</td>
+              <td>{data.state.setWin}</td>
+              <td>{data.state.setLoss}</td>
+              <td>{setWinPercent}</td>
               <td>{data.state.win}</td>
               <td>{data.state.loss}</td>
-              <td>{data.state.winPercent}</td>
+              <td>{winPercent}</td>
             </tr>
           </tbody>
         </table>
@@ -165,7 +174,8 @@ const Player = (props) => {
                           characterKey: otherPlayerData[0].characterKey,
                           win: otherPlayerData[0].win,
                           loss: otherPlayerData[0].loss,
-                          winPercent: otherPlayerData[0].winPercent
+                          setWin: otherPlayerData[0].setWin,
+                          setLoss: otherPlayerData[0].setLoss
                         }
                       }>{isp1 ? playerB : playerA}</Link>
                       <img className="ps-2 img-fluid icon-responsive" 

@@ -64,6 +64,7 @@ class Main extends React.Component {
                 this.state.rankings.map((player, idx) => {
                   let winPercent = Math.round(player.win / (player.win + player.loss) * 100);
                   let setWinPercent = Math.round(player.setWin / (player.setWin + player.setLoss) * 100);
+                  console.log(player);
                   return (
                     <tr key={idx}>
                       <th scope="row"><span className="ps-3">{idx+1}</span></th>
@@ -80,8 +81,7 @@ class Main extends React.Component {
                             win: player.win,
                             loss: player.loss,
                             setWin: player.setWin,
-                            setLoss: player.setLoss,
-                            winPercent: winPercent
+                            setLoss: player.setLoss
                           }
                         }>
                           <img className="img img-fluid icon-responsive" src={"./img/"+player.characterKey+".png"} alt="character icon"/>
