@@ -150,32 +150,32 @@ const Player = (props) => {
                   // Player is A
                   otherPlayerData = data.state.rankings.filter((player) => {
                       return set.players['1'] === player.playerKey;
-                  });
+                  })[0];
 
                 } else {
                   // Player is B
                   otherPlayerData = data.state.rankings.filter((player) => {
                       return set.players['0'] === player.playerKey;
-                  });
+                  })[0];
                 }
 
                 return (
                   <tr key={idx}>
                     <th scope="row"><em>{idx + 1}</em></th>
                     <td>
-                      <Link to={"/player/"+otherPlayerData[0].playerKey} className="text-black player-profile-link" state={
+                      <Link to={"/player/"+otherPlayerData.playerKey} className="text-black player-profile-link" state={
                         {
                           data: data.state.data,
                           rankings: data.state.rankings,
-                          name: otherPlayerData[0].name,
-                          score: otherPlayerData[0].score,
-                          rank: otherPlayerData[0].rank,
-                          playerKey: otherPlayerData[0].playerKey,
-                          characterKey: otherPlayerData[0].characterKey,
-                          win: otherPlayerData[0].win,
-                          loss: otherPlayerData[0].loss,
-                          setWin: otherPlayerData[0].setWin,
-                          setLoss: otherPlayerData[0].setLoss
+                          name: otherPlayerData.name,
+                          score: otherPlayerData.score,
+                          rank: otherPlayerData.rank,
+                          playerKey: otherPlayerData.playerKey,
+                          characterKey: otherPlayerData.characterKey,
+                          win: otherPlayerData.win,
+                          loss: otherPlayerData.loss,
+                          setWin: otherPlayerData.setWin,
+                          setLoss: otherPlayerData.setLoss
                         }
                       }>{isp1 ? playerB : playerA}</Link>
                       <img className="ps-2 img-fluid icon-responsive" 

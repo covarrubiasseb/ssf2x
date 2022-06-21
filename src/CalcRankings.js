@@ -97,7 +97,7 @@ function CalcRankings(matchData, setBonus) {
   });
 
   // sort result by win percent in case of tied ratings
-  return result.sort((a,b) => {
+  result.sort((a,b) => {
     if (a.score === b.score) {
       let playerAwinPercent = Math.round((a.win / (a.win + a.loss))*100);
       let playerBwinPercent = Math.round((b.win / (b.win + b.loss))*100);
@@ -107,6 +107,12 @@ function CalcRankings(matchData, setBonus) {
       return b.score - a.score;
     }
   });
+
+  result.forEach((player, idx) => {
+    player['rank'] = idx + 1;
+  });
+
+  return result;
 
 }
 

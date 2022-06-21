@@ -64,7 +64,6 @@ class Main extends React.Component {
                 this.state.rankings.map((player, idx) => {
                   let winPercent = Math.round(player.win / (player.win + player.loss) * 100);
                   let setWinPercent = Math.round(player.setWin / (player.setWin + player.setLoss) * 100);
-                  console.log(player);
                   return (
                     <tr key={idx}>
                       <th scope="row"><span className="ps-3">{idx+1}</span></th>
@@ -75,7 +74,7 @@ class Main extends React.Component {
                             rankings: this.state.rankings,
                             name: player.name,
                             score: player.score,
-                            rank: idx + 1,
+                            rank: player.rank,
                             playerKey: player.playerKey,
                             characterKey: player.characterKey,
                             win: player.win,
