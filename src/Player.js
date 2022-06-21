@@ -78,7 +78,7 @@ const Player = (props) => {
         </div>   
       </div>
 
-      <h1 className="text-white-50 pe-4 text-center display-1"><em>Match History</em></h1>
+      <h1 className="text-white-50 text-center display-2"><em>Match History</em></h1>
 
       <div className="table-responsive">
         <table className="table table-hover text-white-50 text-center border-dark">
