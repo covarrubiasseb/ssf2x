@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <nav className="navbar navbar-dark bg-dark border-bottom border-primary fixed-top">
-      <div class="d-flex align-items-center">
-        <div class="navbar-brand ms-2">
+      <div className="d-flex align-items-center">
+        <div className="navbar-brand ms-2">
           <img src={title} width="72" alt="SSF2X Logo"/>
         </div>
         <Link to="/">
