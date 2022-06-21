@@ -1,7 +1,6 @@
 .Main {
   font-size: calc(10px + 2vmin);
   color: white;
-  /*margin-top: 100px;*/
 }
 
 .App-header::before {
@@ -56,6 +55,10 @@
   th, td {
     border: 1px solid black;
   }
+
+  .icon-responsive {
+    float: right;
+  }
 }
 
 @media (max-width: 480px) {
@@ -90,7 +93,7 @@
     display: none;
   }
   .icon-responsive {
-    width: 15%;
+    width: 25%;
   }
 
   .text-responsive {
