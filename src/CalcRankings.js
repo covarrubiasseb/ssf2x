@@ -2,9 +2,10 @@ import SortDate from './SortDate.js';
 import EloRating from './ELO.js';
 
 const K = 60;
+const SET_K = 60;
 const BASE_RATING = 1800;
 
-function CalcRankings(matchData) {
+function CalcRankings(matchData, setBonus) {
   let rankings = Object.create(null);
   let result = [];
   // sort matches by date
@@ -21,6 +22,9 @@ function CalcRankings(matchData) {
     let playerCharA = matchData.sets[match.matchKey].characters[0];
     let playerCharB = matchData.sets[match.matchKey].characters[1];
     let rating;
+    let setRating;
+    let playerA_count = 0;
+    let playerB_count = 0;
 
     players.forEach((playerKey, i) => {
       if (!rankings[playerKey]) {
@@ -29,6 +33,8 @@ function CalcRankings(matchData) {
           score: BASE_RATING,
           win: 0,
           loss: 0,
+          setWin: 0,
+          setLoss: 0,
           playerKey: playerKey
         };
 
@@ -46,15 +52,34 @@ function CalcRankings(matchData) {
         rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, K, true);
         rankings[players[0]].win += 1;
         rankings[players[1]].loss += 1; 
+        playerA_count+=1;
       } else {
         rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, K, false);
         rankings[players[1]].win += 1;
-        rankings[players[0]].loss += 1;   
+        rankings[players[0]].loss += 1; 
+        playerB_count+=1;  
       }
     });      
 
     rankings[players[0]].score = rating[0];
     rankings[players[1]].score = rating[1];
+
+    if (setBonus) {
+      if (playerA_count > ((playerA_count + playerB_count) / 2)) {
+        // P1 Wins the set
+        setRating = EloRating(rankings[players[0]].score, rankings[players[1]].score, SET_K, true);
+        rankings[players[0]].setWin += 1;
+        rankings[players[1]].setLoss += 1;
+      } else {
+        // P2 Wins the set
+        setRating = EloRating(rankings[players[0]].score, rankings[players[1]].score, SET_K, false);
+        rankings[players[1]].setWin += 1;
+        rankings[players[0]].setLoss += 1;
+      }
+
+      rankings[players[0]].score = setRating[0];
+      rankings[players[1]].score = setRating[1];
+    }
   });
 
   // return rankings
@@ -64,6 +89,8 @@ function CalcRankings(matchData) {
       score: rankings[key].score,
       win: rankings[key].win,
       loss: rankings[key].loss,
+      setWin: rankings[key].setWin,
+      setLoss: rankings[key].setLoss,
       characterKey: rankings[key].characterKey,
       playerKey: rankings[key].playerKey
     });

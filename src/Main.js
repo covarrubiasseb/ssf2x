@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CalcRankings from './CalcRankings.js';
 
-const RATINGS_BAR_CURVE = 2100;
+const RATINGS_BAR_CURVE = 2200;
 const WINPERCENT_BAR_TO_WINDOW_WIDTH_RATIO = 16;
 const RATINGS_BAR_TO_WINDOW_WIDTH_RATIO = 3;
 const RATINGS_BAR_TEXT_RATIO = 4;
 const SVG_BAR_HEIGHT = 40;
+const SET_BONUS = true;
 
 class Main extends React.Component {
   constructor(props) {
@@ -34,7 +35,7 @@ class Main extends React.Component {
     }).then((matchData) => {
         this.setState({
           data: matchData,
-          rankings: CalcRankings(matchData)
+          rankings: CalcRankings(matchData, SET_BONUS)
         });
     });
   }
@@ -51,6 +52,7 @@ class Main extends React.Component {
               <tr>
                 <th className="text-center" scope="col"><em className="rank-responsive">Rank</em></th>
                 <th className="text-center" scope="col"><em>Player</em></th>
+                <th className="text-center win-responsive" scope="col"><em>(Set)W - L</em></th>
                 <th className="text-center win-responsive" scope="col"><em>W - L</em></th>
                 <th className="text-center" scope="col"><em>Win%</em></th>
                 <th className="text-center" scope="col"><em>Rating(ELO)</em></th>
@@ -81,6 +83,14 @@ class Main extends React.Component {
                           <img className="img img-fluid icon-responsive" src={"./img/"+player.characterKey+".png"} alt="character icon"/>
                           <span className="text-responsive">{player.name}</span>
                         </Link>
+                      </td>
+
+                      <td className="win-responsive">
+                        <div className="mt-1 text-center ps-1 pe-1">
+                          {
+                            // find set wins
+                          }
+                        </div>
                       </td>
 
                       <td className="win-responsive">
