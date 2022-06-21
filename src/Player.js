@@ -27,10 +27,10 @@ const Player = (props) => {
       <div className="ms-5 me-5 mt-4 player-info bg-table text-center border border-dark border-2 shadow-lg">
         <div className="d-flex border-bottom border-dark mt-3 justify-content-center">
           <img className="ms-1" src={"./img/"+data.state.characterKey+".png"} alt="character-icon"/>
-          <h1 className="ms-2 mt-auto display-6">{data.state.name}</h1>
+          <h1 className="ms-2 mt-auto display-4">{data.state.name}</h1>
         </div>
 
-        <table className="table table-borderless">
+        <table className="table table-dark text-white-50 border-secondary">
           <thead>
             <tr>
               <th scope="col"><em className="rank-responsive">Rank</em></th>
