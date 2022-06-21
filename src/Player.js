@@ -90,7 +90,7 @@ const Player = (props) => {
               <th scope="col"><em>W</em></th>
               <th scope="col"><em>L</em></th>
               <th className="result-responsive" scope="col"><em>Result</em></th>
-              <th scope="col"><em>link</em></th>
+              <th scope="col"><em className="thead-link-responsive">link</em></th>
             </tr>
           </thead>
 
@@ -139,7 +139,8 @@ const Player = (props) => {
                       <img className="ps-2 img-fluid icon-responsive" 
                       src={isp1 ? "./img/"+set.characters['1']+".png" : "./img/"+set.characters['0']+".png"} alt="character icon"/>
                     </td>
-                    <td>{set.date.slice(5, 7)}/{set.date.slice(8, 10)}/{set.date.slice(2, 4)}</td>
+                    <td className="date">{set.date.slice(5, 7)}/{set.date.slice(8, 10)}/{set.date.slice(2, 4)}</td>
+                    <td className="date-responsive">{set.date.slice(5, 7)}/{set.date.slice(2, 4)}</td>
                     <td>{isp1 ? p1WinTotal : p2WinTotal}</td>
                     <td>{!isp1 ? p1WinTotal : p2WinTotal}</td>
                     <td className="result-responsive">{playerWin ? "Win" : "Loss"}</td>
