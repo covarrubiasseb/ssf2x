@@ -6,6 +6,7 @@ const RATINGS_BAR_CURVE = 2000;
 const WINPERCENT_BAR_TO_WINDOW_WIDTH_RATIO = 16;
 const RATINGS_BAR_TO_WINDOW_WIDTH_RATIO = 3;
 const RATINGS_BAR_TEXT_RATIO = 4;
+const SVG_BAR_HEIGHT = 40;
 
 class Main extends React.Component {
   constructor(props) {
@@ -89,9 +90,9 @@ class Main extends React.Component {
                       </td>
 
                       <td className="win-percent text-center">
-                        <svg width={this.state.windowWidth / WINPERCENT_BAR_TO_WINDOW_WIDTH_RATIO} height='60px' className=" bg-gradient">
+                        <svg width={this.state.windowWidth / WINPERCENT_BAR_TO_WINDOW_WIDTH_RATIO} height={SVG_BAR_HEIGHT} className=" bg-gradient">
                           <g className="bars">
-                            <rect stroke="#333" fill="url(#winPercentGradient)" height='60px'
+                            <rect stroke="#333" fill="url(#winPercentGradient)" height={SVG_BAR_HEIGHT}
                             width={(this.state.windowWidth / WINPERCENT_BAR_TO_WINDOW_WIDTH_RATIO) * (winPercent / 100)}></rect>
                             <text x="20%" y="80%" fill="#DDD" transform="skewX(-10) scale(0.55 0.55)">{winPercent}%</text>
                           </g>
@@ -100,10 +101,10 @@ class Main extends React.Component {
                       </td>
 
                       <td>
-                        <svg width={this.state.windowWidth / RATINGS_BAR_TO_WINDOW_WIDTH_RATIO} height='60px'>
+                        <svg width={this.state.windowWidth / RATINGS_BAR_TO_WINDOW_WIDTH_RATIO} height={SVG_BAR_HEIGHT}>
                           <g className="bars">
                             <rect stroke="#333" fill="url(#RatingBarGradient)"
-                            width={(this.state.windowWidth / RATINGS_BAR_TO_WINDOW_WIDTH_RATIO) * (player.score/RATINGS_BAR_CURVE)} height='60px'></rect>
+                            width={(this.state.windowWidth / RATINGS_BAR_TO_WINDOW_WIDTH_RATIO) * (player.score/RATINGS_BAR_CURVE)} height={SVG_BAR_HEIGHT}></rect>
                             <text x={(this.state.windowWidth / RATINGS_BAR_TEXT_RATIO) * (player.score/RATINGS_BAR_CURVE)} y="80%" transform="skewX(-15)">{player.score}</text>
                           </g>
                         </svg>
