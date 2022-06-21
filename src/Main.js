@@ -52,7 +52,7 @@ class Main extends React.Component {
                 <th className="text-center" scope="col"><em>Player</em></th>
                 <th className="text-center win-responsive" scope="col"><em>W</em></th>
                 <th className="text-center loss-responsive" scope="col"><em>L</em></th>
-                <th scope="col"><em>Win%</em></th>
+                <th className="text-center" scope="col"><em>Win%</em></th>
                 <th scope="col"><em>Rating(ELO)</em></th>
               </tr>
             </thead>
@@ -94,7 +94,7 @@ class Main extends React.Component {
                         </div>
                       </td>
 
-                      <td className="win-percent">
+                      <td className="win-percent text-center">
                         <svg width={this.state.windowWidth / WINPERCENT_BAR_TO_WINDOW_WIDTH_RATIO} height='60px' className=" bg-gradient">
                           <g className="bars">
                             <rect stroke="#333" fill="url(#winPercentGradient)" height='60px'
