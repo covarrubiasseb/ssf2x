@@ -45,6 +45,10 @@
   text-decoration: none;
 }
 
+.icon-responsive {
+  float: right;
+}
+
 @media (max-width: 1150px) {
   svg {
     display: none;
@@ -114,9 +118,5 @@
 
   .date-responsive {
     display: none;
-  }
-
-  .icon-responsive {
-    float: right;
   }
 }
