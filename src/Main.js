@@ -63,7 +63,7 @@ class Main extends React.Component {
                     <tr key={idx}>
                       <th scope="row"><span className="ps-3">{idx+1}</span></th>
                       <td>
-                        <Link to="/player" className="text-black player-profile-link" state={
+                        <Link to={"/player/"+player.playerKey} className="text-black player-profile-link" state={
                           {
                             data: this.state.data,
                             rankings: this.state.rankings,

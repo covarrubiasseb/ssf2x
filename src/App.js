@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useParams } from 'react-router-dom';
 import Main from './Main.js';
 import Player from './Player.js';
 
@@ -26,7 +26,10 @@ class App extends React.Component {
 
         <Routes>
           <Route exact path="/" element={<Main />}/>
-          <Route path="/player" element={<Player />}/>
+            <Route path="/player">
+              <Route path=":playerId" element={<Player />}>
+            </Route>
+          </Route>
         </Routes>
       </div>
     );

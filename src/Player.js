@@ -150,7 +150,7 @@ const Player = (props) => {
                   <tr key={idx}>
                     <th scope="row"><em>{idx + 1}</em></th>
                     <td>
-                      <Link to="/player" className="text-black player-profile-link" state={
+                      <Link to={"/player/"+otherPlayerData[0].playerKey} className="text-black player-profile-link" state={
                         {
                           data: data.state.data,
                           rankings: data.state.rankings,
