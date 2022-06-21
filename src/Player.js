@@ -23,7 +23,7 @@ const Player = (props) => {
   });
 
   return (
-    <div className="Player text-white ms-3 me-3">
+    <div className="Player  d-flex flex-column align-items-center">
       <div className="d-flex border-bottom border-dark">
         <img className="ms-1" src={"./img/"+data.state.characterKey+".png"} alt="character-icon"/>
         <h1 className="ms-2 text-white-50 mt-auto">{data.state.name}</h1>
@@ -69,12 +69,12 @@ const Player = (props) => {
         </div>
 
         <div className="d-flex flex-row">
-          <div className="w-50"><em>Win%</em></div>
+          <div className="w-50"><em>%</em></div>
           <div className="w-50">{data.state.winPercent}</div>
         </div>
 
         <div className="d-flex flex-row">
-          <div className="w-50"><em>Rating</em></div>
+          <div className="w-50"><em>ELO</em></div>
           <div className="w-50">{data.state.score}</div>
         </div>   
       </div>
