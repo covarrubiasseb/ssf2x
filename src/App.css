@@ -57,10 +57,6 @@
   .svg-responsive {
     display: block;
   }
-
-  .icon-responsive {
-    float: right;
-  }
 }
 
 @media (max-width: 480px) {
