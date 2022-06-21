@@ -3,7 +3,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Main from './Main.js';
 import Player from './Player.js';
-import Navbar from './Navbar.js'
+import Navbar from './Navbar.js';
 
 class App extends React.Component {
 
@@ -11,6 +11,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header ms-5 me-5"></header>
+
+        <Navbar />
+
         <svg height="0px" width="0px">
           <defs>
             <linearGradient id="RatingBarGradient">
@@ -24,8 +27,6 @@ class App extends React.Component {
             </linearGradient>
           </defs>
         </svg>
-
-        <Navbar />
 
         <Routes>
           <Route exact path="/" element={<Main />}/>
