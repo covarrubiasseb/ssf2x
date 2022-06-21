@@ -8,6 +8,7 @@ const RATINGS_BAR_TO_WINDOW_WIDTH_RATIO = 3;
 const RATINGS_BAR_TEXT_RATIO = 4;
 const SVG_BAR_HEIGHT = 40;
 const SET_BONUS = true;
+const DECAY_ON = true;
 
 class Main extends React.Component {
   constructor(props) {
@@ -35,7 +36,7 @@ class Main extends React.Component {
     }).then((matchData) => {
         this.setState({
           data: matchData,
-          rankings: CalcRankings(matchData, SET_BONUS)
+          rankings: CalcRankings(matchData, SET_BONUS, DECAY_ON)
         });
     });
   }
