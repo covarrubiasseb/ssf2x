@@ -1,4 +1,3 @@
-import title from './title.png';
 import './App.css';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
@@ -11,11 +10,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header ms-5 me-5"></header>
-
-        {/*<div>
-          <img className="img img-fluid img-2x-logo" src={title} alt="2X Logo"/>
-        </div>*/}
-
         <svg height="0px" width="0px">
           <defs>
             <linearGradient id="RatingBarGradient">

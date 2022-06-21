@@ -40,20 +40,19 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div className="Main">
-        <h1 className="text-center text-white-50 display-1"><em>
+      <div className="Main d-flex flex-column align-items-center">
+        <h1 className="text-center text-white-50 display-1 mt-5"><em>
           Super Street Fighter II X Rankings</em>
         </h1>
-        <div className="table-responsive">
-          <table className="table table-hover border-dark text-white-50">
-            <thead className="text-white-50">
+        <div className="table-responsive mt-5">
+          <table className="table table-sm table-hover border-dark text-black bg-table">
+            <thead>
               <tr>
                 <th className="text-center" scope="col"><em className="rank-responsive">Rank</em></th>
                 <th className="text-center" scope="col"><em>Player</em></th>
-                <th className="text-center win-responsive" scope="col"><em>W</em></th>
-                <th className="text-center loss-responsive" scope="col"><em>L</em></th>
+                <th className="text-center win-responsive" scope="col"><em>W - L</em></th>
                 <th className="text-center" scope="col"><em>Win%</em></th>
-                <th scope="col"><em>Rating(ELO)</em></th>
+                <th className="text-center" scope="col"><em>Rating(ELO)</em></th>
               </tr>
             </thead>
             <tbody className="table-group-divider">
@@ -64,7 +63,7 @@ class Main extends React.Component {
                     <tr key={idx}>
                       <th scope="row"><span className="ps-3">{idx+1}</span></th>
                       <td>
-                        <Link to="/player" className="text-white-50 player-profile-link" state={
+                        <Link to="/player" className="text-black player-profile-link" state={
                           {
                             data: this.state.data,
                             name: player.name,
@@ -84,13 +83,7 @@ class Main extends React.Component {
 
                       <td className="win-responsive">
                         <div className="mt-1 text-center ps-1 pe-1">
-                          <em>{player.win}</em>
-                        </div>
-                      </td>
-
-                      <td className="loss-responsive">
-                        <div className="mt-1 text-center ps-1 pe-1">
-                          <em>{player.loss}</em>
+                          {player.win} - {player.loss}
                         </div>
                       </td>
 
