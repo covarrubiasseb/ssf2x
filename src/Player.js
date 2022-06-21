@@ -33,19 +33,19 @@ const Player = (props) => {
           <thead>
             <tr>
               <th scope="col"><em className="rank-responsive">Rank</em></th>
+              <th scope="col"><em>Rating(ELO)</em></th>
               <th className="win-responsive" scope="col"><em>W</em></th>
               <th className="loss-responsive" scope="col"><em>L</em></th>
               <th scope="col"><em>Win%</em></th>
-              <th scope="col"><em>Rating(ELO)</em></th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>{data.state.rank}</td>
+              <td>{data.state.score}</td>
               <td>{data.state.win}</td>
               <td>{data.state.loss}</td>
               <td>{data.state.winPercent}</td>
-              <td>{data.state.score}</td>
             </tr>
           </tbody>
         </table>
