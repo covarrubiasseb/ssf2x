@@ -28,7 +28,7 @@ const Player = (props) => {
         <h1 className="ms-2 text-white-50 mt-auto">{data.state.name}</h1>
       </div>
 
-      <div className="ms-5 me-5 mt-4 player-info bg-table">
+      <div className="ms-5 me-5 mt-4 player-info bg-table text-center">
         <table className="table border-dark text-black">
           <thead>
             <tr>
