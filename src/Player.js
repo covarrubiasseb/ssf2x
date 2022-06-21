@@ -101,7 +101,7 @@ const Player = (props) => {
 
           <tbody className="table-group-divider text-center">
             {
-              sets.map((set, idx) => {
+              sets.reverse().map((set, idx) => {
                 let playerA = data.state.data.players[set.players['0']];
                 let playerB = data.state.data.players[set.players['1']];
                 let p2WinTotal = 0;
