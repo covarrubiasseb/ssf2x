@@ -24,7 +24,7 @@ const Player = (props) => {
 
   return (
     <div className="Player  d-flex flex-column align-items-center text-black">
-      <div className="ms-5 me-5 mt-4 player-info bg-table text-center">
+      <div className="ms-5 me-5 mt-4 player-info bg-table text-center border border-dark border-2 shadow-lg">
         <div className="d-flex border-bottom border-dark mt-3 justify-content-center">
           <img className="ms-1" src={"./img/"+data.state.characterKey+".png"} alt="character-icon"/>
           <h1 className="ms-2 mt-auto display-6">{data.state.name}</h1>
@@ -86,13 +86,13 @@ const Player = (props) => {
 
       <h1 className="text-white-50 text-center display-2 mt-5"><em>Match History</em></h1>
 
-      <div className="table-responsive bg-table mt-4">
-        <table className="table table-hover text-black text-center border-dark">
-          <thead>
+      <div className="table-responsive bg-table mt-4 border border-dark border-2 shadow-lg">
+        <table className="table table-hover text-black border-dark">
+          <thead className="bg-dark text-white-50">
             <tr>
               <th scope="col"><em></em></th>
               <th scope="col"><em>Opponent</em></th>
-              <th scope="col"><em>Date</em></th>
+              <th scope="col" className="text-center"><em>Date</em></th>
               <th scope="col"><em>W</em></th>
               <th scope="col"><em>L</em></th>
               <th className="result-responsive" scope="col"><em>Result</em></th>
@@ -100,7 +100,7 @@ const Player = (props) => {
             </tr>
           </thead>
 
-          <tbody>
+          <tbody className="table-group-divider text-center">
             {
               sets.map((set, idx) => {
                 let playerA = data.state.data.players[set.players['0']];
