@@ -23,7 +23,7 @@ const Player = (props) => {
   });
 
   return (
-    <div className="Player  d-flex flex-column align-items-center text-black">
+    <div className="Player d-flex flex-column align-items-center text-black mt-5">
       <div className="ms-5 me-5 mt-4 player-info bg-table text-center border border-dark border-2 shadow-lg">
         <div className="d-flex border-bottom border-dark mt-3 justify-content-center">
           <img className="ms-1" src={"./img/"+data.state.characterKey+".png"} alt="character-icon"/>
