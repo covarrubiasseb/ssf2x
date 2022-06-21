@@ -47,7 +47,7 @@ class Main extends React.Component {
         </h1>
         <div className="table-responsive mt-5 bg-table border border-dark border-2">
           <table className="table table-hover border-dark text-black">
-            <thead class="table-dark text-white-50">
+            <thead class="bg-dark bg-gradient text-white-50">
               <tr>
                 <th className="text-center" scope="col"><em className="rank-responsive">Rank</em></th>
                 <th className="text-center" scope="col"><em>Player</em></th>

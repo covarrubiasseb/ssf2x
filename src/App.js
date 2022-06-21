@@ -3,6 +3,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Main from './Main.js';
 import Player from './Player.js';
+import Navbar from './Navbar.js'
 
 class App extends React.Component {
 
@@ -24,12 +25,16 @@ class App extends React.Component {
           </defs>
         </svg>
 
+        <Navbar />
+
         <Routes>
           <Route exact path="/" element={<Main />}/>
-            <Route path="/player">
-              <Route path=":playerId" element={<Player />}>
-            </Route>
+
+          <Route path="/player">
+            <Route path=":playerId" element={<Player />}/>
           </Route>
+
+          <Route path="/about"/>
         </Routes>
       </div>
     );

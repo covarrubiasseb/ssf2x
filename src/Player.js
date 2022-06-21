@@ -87,8 +87,8 @@ const Player = (props) => {
       <h1 className="text-white-50 text-center display-2 mt-5"><em>Match History</em></h1>
 
       <div className="table-responsive bg-table mt-4 border border-dark border-2 shadow-lg">
-        <table className="table table-hover table-bordered text-black border-dark">
-          <thead className="bg-dark text-white-50">
+        <table className="table table-hover text-black border-dark">
+          <thead className="bg-dark bg-gradient text-white-50">
             <tr>
               <th scope="col"><em></em></th>
               <th scope="col"><em>Opponent</em></th>
@@ -173,7 +173,7 @@ const Player = (props) => {
                     </td>
                     <td className="date">{set.date.slice(5, 7)}/{set.date.slice(8, 10)}/{set.date.slice(2, 4)}</td>
                     <td className="date-responsive">{set.date.slice(5, 7)}/{set.date.slice(2, 4)}</td>
-                    <td className="border-dark">
+                    <td className="border-start border-end border-dark">
                       {isp1 ? p1WinTotal : p2WinTotal}-{!isp1 ? p1WinTotal : p2WinTotal}
                     </td>
                     <td className="result-responsive">{playerWin ? "Win" : "Loss"}</td>
