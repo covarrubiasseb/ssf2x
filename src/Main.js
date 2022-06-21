@@ -42,18 +42,19 @@ class Main extends React.Component {
 
   render() {
     return (
-      <main className="Main d-flex flex-column align-items-center mt-5 mb-5">
+      <main className="Main d-flex flex-column mt-5 mb-5">
         <h1 className="text-center text-white-50 display-1 mt-5">
           <em>Super Street Fighter II X Rankings</em>
         </h1>
-        <div className="table-responsive mt-5 bg-table border border-dark border-2">
-          <table className="table table-hover border-dark text-black">
+        <div className="table-responsive mt-5 ms-2 me-2 bg-table border border-dark border-2">
+          <table className="table table-sm table-hover border-dark text-black">
             <thead className="bg-dark bg-gradient text-white-50">
               <tr>
                 <th className="text-center" scope="col"><em className="rank-responsive">Rank</em></th>
                 <th className="text-center" scope="col"><em>Player</em></th>
-                <th className="text-center win-responsive" scope="col"><em>(Set)W - L</em></th>
-                <th className="text-center win-responsive" scope="col"><em>W - L</em></th>
+                <th className="text-center win-responsive" scope="col"><em>(Set)W-L</em></th>
+                <th className="text-center set-win-responsive" scope="col"><em>SetWin%</em></th>
+                <th className="text-center win-responsive" scope="col"><em>W-L</em></th>
                 <th className="text-center" scope="col"><em>Win%</em></th>
                 <th className="text-center" scope="col"><em>Rating(ELO)</em></th>
               </tr>
@@ -62,6 +63,7 @@ class Main extends React.Component {
               {
                 this.state.rankings.map((player, idx) => {
                   let winPercent = Math.round(player.win / (player.win + player.loss) * 100);
+                  let setWinPercent = Math.round(player.setWin / (player.setWin + player.setLoss) * 100);
                   return (
                     <tr key={idx}>
                       <th scope="row"><span className="ps-3">{idx+1}</span></th>
@@ -77,6 +79,8 @@ class Main extends React.Component {
                             characterKey: player.characterKey,
                             win: player.win,
                             loss: player.loss,
+                            setWin: player.setWin,
+                            setLoss: player.setLoss,
                             winPercent: winPercent
                           }
                         }>
@@ -87,19 +91,28 @@ class Main extends React.Component {
 
                       <td className="win-responsive">
                         <div className="mt-1 text-center ps-1 pe-1">
-                          {
-                            // find set wins
-                          }
+                          {player.setWin}-{player.setLoss}
                         </div>
+                      </td>
+
+                      <td className="set-win-responsive text-center">
+                        <svg width={this.state.windowWidth / WINPERCENT_BAR_TO_WINDOW_WIDTH_RATIO} height={SVG_BAR_HEIGHT} className=" bg-gradient">
+                          <g className="bars">
+                            <rect stroke="#333" fill="url(#winPercentGradient)" height={SVG_BAR_HEIGHT}
+                            width={(this.state.windowWidth / WINPERCENT_BAR_TO_WINDOW_WIDTH_RATIO) * (setWinPercent / 100)}></rect>
+                            <text x="20%" y="80%" fill="#DDD" transform="skewX(-10) scale(0.55 0.55)">{setWinPercent}%</text>
+                          </g>
+                        </svg>
+                        <div className="svg-responsive mt-1 text-center"><em>{setWinPercent}%</em></div>
                       </td>
 
                       <td className="win-responsive">
                         <div className="mt-1 text-center ps-1 pe-1">
-                          {player.win} - {player.loss}
+                          {player.win}-{player.loss}
                         </div>
                       </td>
 
-                      <td className="win-percent text-center">
+                      <td className="text-center">
                         <svg width={this.state.windowWidth / WINPERCENT_BAR_TO_WINDOW_WIDTH_RATIO} height={SVG_BAR_HEIGHT} className=" bg-gradient">
                           <g className="bars">
                             <rect stroke="#333" fill="url(#winPercentGradient)" height={SVG_BAR_HEIGHT}

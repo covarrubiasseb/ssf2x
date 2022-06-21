@@ -1,8 +1,8 @@
 import SortDate from './SortDate.js';
 import EloRating from './ELO.js';
 
-const K = 60;
-const SET_K = 60;
+const K = 48;
+const SET_K = K * 2;
 const BASE_RATING = 1800;
 
 function CalcRankings(matchData, setBonus) {
