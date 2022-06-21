@@ -2,9 +2,6 @@ import React from 'react';
 import { useLocation } from 'react-router-dom'; 
 import SortDate from './SortDate.js';
 
-const IFRAME_WIDTH = 480;
-const IFRAME_HEIGHT = 320;
-
 const Player = (props) => {
   let data = useLocation();
 
@@ -81,112 +78,83 @@ const Player = (props) => {
         </div>   
       </div>
 
-      <ul><h1 className="text-white-50 pe-4 text-center">Match History</h1> {
-        sets.map((set, idx) => {
-          let playerA = data.state.data.players[set.players['0']];
-          let playerB = data.state.data.players[set.players['1']];
-          let p2WinTotal = 0;
-          let playerWin;
-          let isp1;
+      <h1 className="text-white-50 pe-4 text-center display-1"><em>Match History</em></h1>
 
-          let p1WinTotal = set.score.reduce((curr, acc) => {
-            return curr + acc;
-          });
+      <div className="table-responsive">
+        <table className="table table-hover text-white-50 text-center border-dark">
+          <thead>
+            <tr>
+              <th scope="col"><em></em></th>
+              <th scope="col"><em>Opponent</em></th>
+              <th scope="col"><em>Date</em></th>
+              <th scope="col"><em>W</em></th>
+              <th scope="col"><em>L</em></th>
+              <th className="result-responsive" scope="col"><em>Result</em></th>
+              <th scope="col"><em>link</em></th>
+            </tr>
+          </thead>
 
-          set.score.forEach((game) => {
-            if (game === 0) {
-              p2WinTotal++;
+          <tbody>
+            {
+              sets.map((set, idx) => {
+                let playerA = data.state.data.players[set.players['0']];
+                let playerB = data.state.data.players[set.players['1']];
+                let p2WinTotal = 0;
+                let playerWin;
+                let isp1;
+
+                let p1WinTotal = set.score.reduce((curr, acc) => {
+                  return curr + acc;
+                });
+
+                set.score.forEach((game) => {
+                  if (game === 0) {
+                    p2WinTotal++;
+                  }
+                });
+
+                if (data.state.playerKey === set.players[0]) {
+                  // player is P1
+                  isp1 = true;
+                  if (p1WinTotal > (set.score.length / 2)) {
+                    playerWin = true;
+                  } else {
+                    playerWin = false;
+                  }
+                } else {
+                  // player is P2
+                  isp1 = false;
+                  if (p1WinTotal > (set.score.length / 2)) {
+                    playerWin = false;
+                  } else {
+                    playerWin = true;
+                  }
+                }
+
+                return (
+                  <tr key={idx}>
+                    <th scope="row"><em>{idx + 1}</em></th>
+                    <td>
+                      {isp1 ? playerB : playerA}
+                      <img className="ps-2 img-fluid icon-responsive" 
+                      src={isp1 ? "./img/"+set.characters['1']+".png" : "./img/"+set.characters['0']+".png"} alt="character icon"/>
+                    </td>
+                    <td>{set.date.slice(5, 7)}/{set.date.slice(8, 10)}/{set.date.slice(2, 4)}</td>
+                    <td>{isp1 ? p1WinTotal : p2WinTotal}</td>
+                    <td>{!isp1 ? p1WinTotal : p2WinTotal}</td>
+                    <td className="result-responsive">{playerWin ? "Win" : "Loss"}</td>
+                    <td>
+                      <a href={"https://youtu.be/"+set.link}>
+                        <img className="video-icon-responsive" width="64" src="./img/video-icon.png" alt="video url icon"/>
+                      </a>
+                    </td>
+                  </tr>
+                );
+              })
             }
-          });
-
-          if (data.state.playerKey === set.players[0]) {
-            // player is P1
-            isp1 = true;
-            if (p1WinTotal > (set.score.length / 2)) {
-              playerWin = true;
-            } else {
-              playerWin = false;
-            }
-          } else {
-            // player is P2
-            isp1 = false;
-            if (p1WinTotal > (set.score.length / 2)) {
-              playerWin = false;
-            } else {
-              playerWin = true;
-            }
-          }
-          return (
-            <li key={idx} className="mt-2 border border-dark me-4 text-white-50">
-              <div className="match-table">
-                <div className="d-flex">
-                  <div className="text-center ms-4 mb-4 mt-4 me-4 w-50">
-                    <h1 className="border-bottom border-dark d-flex">
-                      <div className="w-50 border-end border-dark">Opponent</div>
-                      <div className="w-50">
-                        {isp1 ? playerB : playerA}
-                        <img className="ps-2" src={isp1 ? "./img/"+set.characters['1']+".png" : "./img/"+set.characters['0']+".png"} alt="character icon"/>
-                      </div>
-                      
-                    </h1>
-                    <div className="d-flex flex-row">
-                      <div className="w-50 border-end border-dark">Date</div>
-                      <div className="w-50">{set.date.slice(5)}-{set.date.slice(2, 4)}</div>
-                    </div>
-
-                    <div className="d-flex flex-row">
-                      <div className="w-50 border-end border-dark">W</div>
-                      <div className="w-50">{isp1 ? p1WinTotal : p2WinTotal}</div>
-                    </div>
-
-                    <div className="d-flex flex-row">
-                      <div className="w-50 border-end border-dark">L</div>
-                      <div className="w-50">{!isp1 ? p1WinTotal  : p2WinTotal}</div>
-                    </div>
-
-                    <div className="d-flex flex-row">  
-                      <div className="w-50 border-bottom border-end border-dark">Result</div>
-                      <div className="w-50 border-bottom border-dark">{playerWin ? "Win" : "Loss"}</div>
-                    </div>
-                  </div>
-
-                  <div className="w-50 d-flex justify-content-center">
-                    <iframe className="pt-3 pb-3" title={"match-"+{idx}} width={IFRAME_WIDTH} height={IFRAME_HEIGHT} 
-                    src={"https://youtube.com/embed/"+set.link} allowfullscreen></iframe>
-                  </div>
-                </div>
-              </div>
-
-              <div className="match-table-responsive">
-                <h1 className="text-center pt-2 ps-1 pe-1">
-                  {playerA}({data.state.data.characters[set.characters['0']]}) vs {playerB}({data.state.data.characters[set.characters['1']]})
-                </h1>
-
-                <div className="d-flex">
-                  <iframe className="w-100" title={"match-"+{idx}} width={IFRAME_WIDTH} height={IFRAME_HEIGHT} 
-                  src={"https://www.youtube.com/embed/"+set.link} allowfullscreen>
-                  </iframe>
-                </div>
-
-                <div className=" d-flex flex-row text-center">
-                  <div className="w-50">Date</div>
-                  <div className="w-50">{set.date.slice(5)}-{set.date.slice(2, 4)}</div>
-                </div>
-
-                <div className=" d-flex flex-row text-center">
-                  <div className="w-50">W - L</div>
-                  <div className="w-50">{Math.max(p1WinTotal, p2WinTotal)} - {Math.min(p1WinTotal, p2WinTotal)}</div>
-                </div>
-
-                <div className=" d-flex flex-row text-center">
-                  <div className="w-50">Result</div>
-                  <div className="w-50">{playerWin ? "Win" : "Loss"}</div>
-                </div>
-              </div>
-            </li>
-          );
-        })
-      }</ul>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

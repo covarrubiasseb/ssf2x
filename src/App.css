@@ -45,6 +45,10 @@
     display: none;
   }
 
+  .video-icon-responsive {
+    width: 32px;
+  }
+
   .svg-responsive {
     display: block;
   }
@@ -59,6 +63,14 @@
     margin-top: 20px;
     width: 240px;
     height: 160px;
+  }
+
+  .result-responsive {
+    display: none;
+  }
+
+  .video-icon-responsive {
+    width: 12px;
   }
 }
 
