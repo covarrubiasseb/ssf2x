@@ -1,9 +1,10 @@
 import './App.css';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import Navbar from './Navbar.js';
 import Main from './Main.js';
 import Player from './Player.js';
-import Navbar from './Navbar.js';
+import About from './About.js';
 
 class App extends React.Component {
 
@@ -35,7 +36,7 @@ class App extends React.Component {
             <Route path=":playerId" element={<Player />}/>
           </Route>
 
-          <Route path="/about"/>
+          <Route path="/about" element={<About />}/>
         </Routes>
       </div>
     );

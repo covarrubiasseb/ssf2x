@@ -8,8 +8,11 @@ const Navbar = () => {
         <div class="navbar-brand ms-2">
           <img src={title} width="72" alt="SSF2X Logo"/>
         </div>
-        <Link to="/" className="text-white-50 text-decoration-none">
+        <Link to="/">
           <img src="./img/home-icon.png" width="40" alt="Home icon"/>
+        </Link>
+        <Link to="/about" className="ms-2 text-white-50 text-decoration-none">
+          <img src="./img/info-icon.png" width="40" alt="Info icon"/>
         </Link>
       </div>
     </nav>

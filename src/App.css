@@ -3,6 +3,14 @@
   color: white;
 }
 
+.Player {
+  font-size: calc(10px + 2vmin);
+}
+
+.About {
+  font-size: calc(10px + 2vmin);
+}
+
 .bg-table {
   border-radius: 25px;
   background: rgb(158,158,158);
@@ -35,10 +43,6 @@
   right: 0;
   width: 20%;
   height: 10%;
-}
-
-.Player {
-  font-size: calc(10px + 2vmin);
 }
 
 .player-profile-link {
