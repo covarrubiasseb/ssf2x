@@ -62,7 +62,7 @@ class Main extends React.Component {
                   let winPercent = Math.round(player.win / (player.win + player.loss) * 100);
                   return (
                     <tr key={idx}>
-                      <th scope="row"><span className="ps-3 pe-3">{idx+1}</span></th>
+                      <th scope="row"><span className="ps-3">{idx+1}</span></th>
                       <td>
                         <Link to="/player" className="text-white-50 player-profile-link" state={
                           {
@@ -77,7 +77,7 @@ class Main extends React.Component {
                             winPercent: winPercent
                           }
                         }>
-                          <img className="me-4 img img-fluid icon-responsive" src={"./img/"+player.characterKey+".png"} alt="character icon"/>
+                          <img className="img img-fluid icon-responsive" src={"./img/"+player.characterKey+".png"} alt="character icon"/>
                           <span className="text-responsive">{player.name}</span>
                         </Link>
                       </td>
