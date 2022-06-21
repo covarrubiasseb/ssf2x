@@ -45,9 +45,9 @@ class Main extends React.Component {
         <h1 className="text-center text-white-50 display-1 mt-5"><em>
           Super Street Fighter II X Rankings</em>
         </h1>
-        <div className="table-responsive mt-5">
-          <table className="table table-sm table-hover border-dark text-black bg-table">
-            <thead>
+        <div className="table-responsive mt-5 bg-table">
+          <table className="table table-hover border-dark text-black">
+            <thead class="table-dark text-white-50">
               <tr>
                 <th className="text-center" scope="col"><em className="rank-responsive">Rank</em></th>
                 <th className="text-center" scope="col"><em>Player</em></th>
