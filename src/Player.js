@@ -145,7 +145,7 @@ const Player = (props) => {
                     <td>{!isp1 ? p1WinTotal : p2WinTotal}</td>
                     <td className="result-responsive">{playerWin ? "Win" : "Loss"}</td>
                     <td>
-                      <a href={"https://youtu.be/"+set.link}>
+                      <a href={"https://youtu.be/"+set.link} target="_blank">
                         <img className="video-icon-responsive" width="64" src="./img/video-icon.png" alt="video url icon"/>
                       </a>
                     </td>
