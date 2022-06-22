@@ -65,6 +65,10 @@
   .svg-responsive {
     display: block;
   }
+
+  .about-responsive {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
@@ -84,6 +88,11 @@
 
   .set-win-responsive {
     display: none;
+  }
+
+  .about-img-responsive {
+    width: 240px;
+    height: 200px;
   }
 }
 
