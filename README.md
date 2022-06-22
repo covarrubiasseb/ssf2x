@@ -26,3 +26,6 @@ Super Street Fighter II X Rankings is a website dedicated to the Super Street Fi
 Super Street Fighter II X Rankings uses the standard ELO rating system, along with custom modifiers to change how many points a player can win/lose per game/set (defined as K). All players are given a Base Rating of 1800. Ratings are generated from date of oldest Set to newest.
 
 ## The Modifiers:
+
+### Sliding K: 
+  For the first few games, a player has an amplified K, that will decay each game until the amplifier is no longer applied. So K(Game 1) > K(Game 2) > ... > base K (no amplifier).
