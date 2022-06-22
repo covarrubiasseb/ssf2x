@@ -1,6 +1,4 @@
 const About = () => {
-  const IMAGE_WIDTH = 384;
-  const IMAGE_HEIGHT = 320;
   return (
     <div className="About d-flex flex-column align-items-center mt-5">
       <h1 className="text-center text-white-50 display-1 mt-5 mb-5">

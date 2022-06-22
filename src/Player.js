@@ -188,8 +188,8 @@ const Player = (props) => {
                     </td>
                     <td className="result-responsive">
                       {
-                        playerWin ? <span>Win <img width="24" src="./img/up.png"/></span> 
-                                  : <span>Loss <img width="24" src="./img/down.png"/></span>
+                        playerWin ? <span>Win <img width="24" src="./img/up.png" alt="win icon"/></span> 
+                                  : <span>Loss <img width="24" src="./img/down.png" alt="loss icon"/></span>
                       }
                     </td>
                     <td>
