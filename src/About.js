@@ -11,13 +11,18 @@ const About = () => {
         <p className="mt-4 ms-4 me-4 text-black"><u>What is Super Street Fighter II X Rankings?</u></p>
 
         <div className="mt-2 ms-4 me-4 d-flex align-items-center about-responsive">
-          <p className="flex-grow-1 me-2">Super Street Fighter II X Rankings is a website dedicated to the Super 
+          <p className="flex-grow-1 me-3">Super Street Fighter II X Rankings is a website dedicated to the Super 
           Street Fighter II X competitive gaming scene in Japan, home of the world's strongest players. The rankings 
           are created using match footage of game sets online from the world's best arcades, and the  
           <a className="text-black" href="https://en.wikipedia.org/wiki/Elo_rating_system" target="_blank"><em> Elo Rating System</em></a>, 
           a popular rating system for competitive games based on predicted probabilities of players winning and actual outcomes.
           </p>
-          <img className="about-img-responsive" width={IMAGE_WIDTH} height={IMAGE_HEIGHT} src="./img/arcade.jpg" alt="Japanese arcade"/>
+          <div className="card border border-dark">
+            <img src="./img/arcade.jpg" class="card-img-top" alt="Japanese arcade"/>
+            <div className="card-footer bg-gradient text-center border-top border-dark border-2 fs-5">
+              Empara Arcade, Osaka, Japan (August, 2019)
+            </div>
+          </div>            
         </div>
 
         <p className="mt-2 ms-4 me-4 text-black"><u>How is ELO used?</u></p>
