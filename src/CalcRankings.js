@@ -1,5 +1,5 @@
 import SortDate from './SortDate.js';
-import EloRating from './ELO.js';
+import EloRating from './Elo.js';
 
 const K = 48;
 const SET_MULTIPLIER = 2;
