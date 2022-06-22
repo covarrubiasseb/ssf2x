@@ -206,7 +206,7 @@ const Player = (props) => {
                                   : <span>Loss <img width="24" src="./img/down.png" alt="loss icon"/></span>
                       }
                     </td>
-                    <td>
+                    <td className="result-responsive">
                       {
                         previousRatings[length - idx] ? previousRatings[length - idx] : data.state.score
                       }
