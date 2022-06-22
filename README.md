@@ -17,7 +17,7 @@ Will launch the app in developer mode at [http://localhost:3000](http://localhos
 
 Bundles the app for production to the `build` folder.
 
-<img src="https://ibb.co/z8m1vRg">
+<img src="https://ibb.co/z8m1vRg/062222.png" alt="SSF2X Home Page">
 
 ## What is Super Street Fighter II X Rankings?
 
