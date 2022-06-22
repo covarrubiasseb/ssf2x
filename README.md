@@ -3,6 +3,8 @@ Repo for the SSF2X.com website (in progress)
 
 Currently deployed at: https://steady-starlight-17e492.netlify.app/
 
+## Development
+
 ### `npm install`
 
 After cloning the repo, run to install all dependencies.
@@ -23,4 +25,4 @@ Super Street Fighter II X Rankings is a website dedicated to the Super Street Fi
 
 Super Street Fighter II X Rankings uses the standard ELO rating system, along with custom modifiers to change how many points a player can win/lose per game/set (defined as K). All players are given a Base Rating of 1800. Ratings are generated from date of oldest Set to newest.
 
-# The Modifiers:
+## The Modifiers:
