@@ -9,6 +9,7 @@ const RATINGS_BAR_TEXT_RATIO = 4;
 const SVG_BAR_HEIGHT = 40;
 const SET_BONUS = true;
 const DECAY_ON = true;
+const SLIDING_K = true;
 
 class Main extends React.Component {
   constructor(props) {
@@ -17,7 +18,12 @@ class Main extends React.Component {
     this.state = {
       rankings: [{
         name: 'ultracombo',
-        score: 3000
+        score: 3000,
+        win: 33,
+        loss: 0,
+        setWin: 33,
+        setLoss: 0,
+        characterKey: '30'
       }],
       data: {},
       windowWidth: window.innerWidth
@@ -36,7 +42,7 @@ class Main extends React.Component {
     }).then((matchData) => {
         this.setState({
           data: matchData,
-          rankings: CalcRankings(matchData, SET_BONUS, DECAY_ON)
+          rankings: CalcRankings(matchData, SET_BONUS, DECAY_ON, SLIDING_K)
         });
     });
   }
