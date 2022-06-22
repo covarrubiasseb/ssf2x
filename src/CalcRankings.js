@@ -37,8 +37,7 @@ function CalcRankings(matchData, setBonus, timeDecay, slidingK) {
     let players = matchData.sets[match.matchKey].players;
     let playerCharA = matchData.sets[match.matchKey].characters[0];
     let playerCharB = matchData.sets[match.matchKey].characters[1];
-    let rating;
-    let setRating;
+    let rating, setRating;
     let playerA_count = 0;
     let playerB_count = 0;
     let matchYear = match.date[0];
@@ -55,7 +54,8 @@ function CalcRankings(matchData, setBonus, timeDecay, slidingK) {
           setWin: 0,
           setLoss: 0,
           playerKey: playerKey,
-          gamesPlayed: 0
+          gamesPlayed: 0,
+          previousRatings: []
         };
 
         if (!i) {
@@ -65,6 +65,10 @@ function CalcRankings(matchData, setBonus, timeDecay, slidingK) {
         }
       }
     });
+
+    // Store old player rating before calculating new one
+    rankings[players[0]].previousRatings.push(rankings[players[0]].score);
+    rankings[players[1]].previousRatings.push(rankings[players[1]].score);
 
     // update player ratings
     gameScore.forEach((p1wins) => {   
@@ -157,17 +161,7 @@ function CalcRankings(matchData, setBonus, timeDecay, slidingK) {
 
   // return rankings
   Object.keys(rankings).forEach((key) => {
-    result.push({
-      name: rankings[key].name,
-      score: rankings[key].score,
-      win: rankings[key].win,
-      loss: rankings[key].loss,
-      setWin: rankings[key].setWin,
-      setLoss: rankings[key].setLoss,
-      characterKey: rankings[key].characterKey,
-      playerKey: rankings[key].playerKey,
-      gamesPlayed: rankings[key].gamesPlayed
-    });
+    result.push(rankings[key]);
   });
 
   // sort result by win percent in case of tied ratings

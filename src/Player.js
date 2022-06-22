@@ -3,6 +3,8 @@ import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import SortDate from './SortDate.js';
 
+const BASE_RATING = 1800;
+
 const Player = (props) => {
   let data = useLocation();
 
@@ -104,19 +106,23 @@ const Player = (props) => {
               <th scope="col" className="text-center"><em>Date</em></th>
               <th scope="col"><em>W-L</em></th>
               <th className="result-responsive" scope="col"><em>Result</em></th>
+              <th className="result-responsive" scope="col"><em>Rating(net)</em></th>
               <th scope="col"><em className="thead-link-responsive">link</em></th>
             </tr>
           </thead>
 
           <tbody className="table-group-divider text-center">
             {
-              sets.reverse().map((set, idx) => {
+              sets.reverse().map((set, idx, _) => {
                 let playerA = data.state.data.players[set.players['0']];
                 let playerB = data.state.data.players[set.players['1']];
                 let p2WinTotal = 0;
                 let playerWin;
                 let isp1;
                 let otherPlayerData;
+                let previousScore = BASE_RATING;
+                let previousRatings;
+                let length = _.length;
 
                 let p1WinTotal = set.score.reduce((curr, acc) => {
                   return curr + acc;
@@ -148,12 +154,20 @@ const Player = (props) => {
 
                 if (isp1) {
                   // Player is A
+                  previousRatings = data.state.rankings.filter((player) => {
+                    return set.players['0'] === player.playerKey;
+                  })[0].previousRatings;
+
                   otherPlayerData = data.state.rankings.filter((player) => {
                       return set.players['1'] === player.playerKey;
                   })[0];
 
                 } else {
                   // Player is B
+                  previousRatings = data.state.rankings.filter((player) => {
+                    return set.players['1'] === player.playerKey;
+                  })[0].previousRatings;
+
                   otherPlayerData = data.state.rankings.filter((player) => {
                       return set.players['0'] === player.playerKey;
                   })[0];
@@ -191,6 +205,20 @@ const Player = (props) => {
                         playerWin ? <span>Win <img width="24" src="./img/up.png" alt="win icon"/></span> 
                                   : <span>Loss <img width="24" src="./img/down.png" alt="loss icon"/></span>
                       }
+                    </td>
+                    <td>
+                      {
+                        previousRatings[length - idx] ? previousRatings[length - idx] : data.state.score
+                      }
+                      ({
+                        previousRatings[length - idx] 
+                          ? (previousRatings[length - idx] - previousRatings[length - (idx + 1)]) > 0
+                            ? <span className="text-success">+{(previousRatings[length - idx] - previousRatings[length - (idx + 1)])}</span>
+                            : <span className="text-danger">{(previousRatings[length - idx] - previousRatings[length - (idx + 1)])}</span>
+                          : (data.state.score - previousRatings[length - (idx + 1)]) > 0
+                            ? <span className="text-success">+{(data.state.score - previousRatings[length - (idx + 1)])}</span>
+                            : <span className="text-danger">{(data.state.score - previousRatings[length - (idx + 1)])}</span>
+                      })
                     </td>
                     <td>
                       <a href={"https://youtu.be/"+set.link} target="_blank">
