@@ -186,7 +186,12 @@ const Player = (props) => {
                     <td className="border-start border-end border-dark">
                       {isp1 ? p1WinTotal : p2WinTotal}-{!isp1 ? p1WinTotal : p2WinTotal}
                     </td>
-                    <td className="result-responsive">{playerWin ? "Win" : "Loss"}</td>
+                    <td className="result-responsive">
+                      {
+                        playerWin ? <span>Win <img width="24" src="./img/up.png"/></span> 
+                                  : <span>Loss <img width="24" src="./img/down.png"/></span>
+                      }
+                    </td>
                     <td>
                       <a href={"https://youtu.be/"+set.link} target="_blank">
                         <img className="video-icon-responsive" width="48" src={"./img/video-icon.png"} alt="video url icon"/>
