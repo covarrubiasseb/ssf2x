@@ -5,7 +5,7 @@ const About = () => {
         <em>Super Street Fighter II X Rankings Explained</em>
       </h1>
 
-      <div className="bg-table border border-dark border-2 shadow-lg ms-5 me-5 mb-5">
+      <div className="bg-table border border-dark border-2 shadow-lg  ms-1 me-1 ms-md-5 me-md-5 mb-5">
         <p className="mt-2 ms-4 me-4">Super Street Fighter II X</p>
 
         <p className="mt-2 ms-4 me-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
