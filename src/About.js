@@ -16,7 +16,7 @@ const About = () => {
           a popular rating system for competitive games based on predicted probabilities of players winning and actual outcomes.
           </p>
           <div className="card border border-dark">
-            <img src="./img/arcade.jpg" class="card-img-top" alt="Japanese arcade"/>
+            <img src="./img/arcade.jpg" className="card-img-top" alt="Japanese arcade"/>
             <div className="card-footer bg-gradient text-center border-top border-dark border-2 fs-5">
               <em>Empara Arcade, Osaka, Japan (August, 2019)</em>
             </div>

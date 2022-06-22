@@ -2,9 +2,6 @@ import './App.css';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar.js';
-import Main from './Main.js';
-import Player from './Player.js';
-import About from './About.js';
 
 class App extends React.Component {
 
@@ -28,16 +25,6 @@ class App extends React.Component {
             </linearGradient>
           </defs>
         </svg>
-
-        <Routes>
-          <Route exact path="/" element={<Main />}/>
-
-          <Route path="/player">
-            <Route path=":playerId" element={<Player />}/>
-          </Route>
-
-          <Route path="/about" element={<About />}/>
-        </Routes>
       </div>
     );
   }

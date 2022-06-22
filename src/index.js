@@ -2,7 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Main from './Main.js';
+import Player from './Player.js';
+import About from './About.js';
+
 import { BrowserRouter } from 'react-router-dom';
+import {Routes, Route, Navigate} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -10,6 +15,17 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
+
+      <Routes>
+          <Route exact path="/" element={<Main />}/>
+
+          <Route path="/player">
+            <Route path=":playerId" element={<Player />}/>
+          </Route>
+
+          <Route path="/about" element={<About />}/>    
+      </Routes>
+        
     </BrowserRouter>
   </React.StrictMode>
 );
