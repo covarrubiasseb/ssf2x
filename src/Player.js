@@ -84,7 +84,7 @@ const Player = (props) => {
 
         <div className="d-flex flex-row">
           <div className="w-50"><em>Win%</em></div>
-          <div className="w-50">{data.state.winPercent}</div>
+          <div className="w-50">{winPercent}</div>
         </div>
 
         <div className="d-flex flex-row">
