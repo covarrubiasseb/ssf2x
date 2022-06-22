@@ -1,24 +1,27 @@
 import SortDate from './SortDate.js';
 import EloRating from './ELO.js';
 
-const K = 48;
-const SET_K = K * 2;
+const K = 192;
+const SET_MULTIPLIER = 2;
+const SET_K = K * SET_MULTIPLIER;
 const BASE_RATING = 1800;
 const CURRENT_YEAR = 2022;
-const DECAY_RATE = 0.75;
+const TIME_DECAY_RATE = 0.8;
+const SLIDING_RATE = 0.98;
+const SLIDING_GAME_COUNT = 5;
 
-function decayK(K, currentYear, matchYear) {
+function decayK(K, current, match, rate) {
   let decay_K = K;
-  let yearsSince = currentYear - matchYear;
+  let diff = current - match;
 
-  for (let i = 0; i < yearsSince; i++) {
-    decay_K = Math.round(DECAY_RATE * decay_K);
+  for (let i = 0; i < diff; i++) {
+    decay_K = Math.round(rate * decay_K);
   }
 
   return decay_K;
 }
 
-function CalcRankings(matchData, setBonus, decay) {
+function CalcRankings(matchData, setBonus, timeDecay, slidingK) {
   let rankings = Object.create(null);
   let result = [];
   // sort matches by date
@@ -39,6 +42,8 @@ function CalcRankings(matchData, setBonus, decay) {
     let playerA_count = 0;
     let playerB_count = 0;
     let matchYear = match.date[0];
+    let final_K = K;
+    let set_final_K = SET_K;
 
     players.forEach((playerKey, i) => {
       if (!rankings[playerKey]) {
@@ -49,7 +54,8 @@ function CalcRankings(matchData, setBonus, decay) {
           loss: 0,
           setWin: 0,
           setLoss: 0,
-          playerKey: playerKey
+          playerKey: playerKey,
+          gamesPlayed: 0
         };
 
         if (!i) {
@@ -61,15 +67,30 @@ function CalcRankings(matchData, setBonus, decay) {
     });
 
     // update player ratings
-    gameScore.forEach((p1wins) => {
+    gameScore.forEach((p1wins) => {   
+      rankings[players[0]].gamesPlayed+=1;
+      rankings[players[1]].gamesPlayed+=1;
+
+      if (slidingK) {
+        if (rankings[players[0]].gamesPlayed > SLIDING_GAME_COUNT) {
+          final_K = decayK(final_K, rankings[players[0]].gamesPlayed, 0, SLIDING_RATE);
+          set_final_K = SET_MULTIPLIER * final_K;
+        }
+
+        if (rankings[players[1]].gamesPlayed > SLIDING_GAME_COUNT) {
+          final_K = decayK(final_K, rankings[players[0]].gamesPlayed, 0, SLIDING_RATE);
+          set_final_K = SET_MULTIPLIER * final_K;
+        }
+      }
+
       if (p1wins) {
-        if (decay) {
+        if (timeDecay) {
           // modify for time decay
-          rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, decayK(K, CURRENT_YEAR, matchYear), true);
+          rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, decayK(final_K, CURRENT_YEAR, matchYear, TIME_DECAY_RATE), true);
 
         } else {
 
-          rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, K, true);
+          rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, final_K, true);
 
         }
         
@@ -77,13 +98,13 @@ function CalcRankings(matchData, setBonus, decay) {
         rankings[players[1]].loss += 1; 
         playerA_count+=1;
       } else {
-        if (decay) {
+        if (timeDecay) {
           // modify for time decay
-          rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, decayK(K, CURRENT_YEAR, matchYear), false);
+          rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, decayK(final_K, CURRENT_YEAR, matchYear, TIME_DECAY_RATE), false);
 
         } else {
 
-          rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, K, false);
+          rating = EloRating(rankings[players[0]].score, rankings[players[1]].score, final_K, false);
 
         }
         
@@ -99,13 +120,13 @@ function CalcRankings(matchData, setBonus, decay) {
     if (setBonus) {
       if (playerA_count > ((playerA_count + playerB_count) / 2)) {
         // P1 Wins the set
-        if (decay) {
+        if (timeDecay) {
           // modify for time decay
-          setRating = EloRating(rankings[players[0]].score, rankings[players[1]].score, decayK(SET_K, CURRENT_YEAR, matchYear), true);
+          setRating = EloRating(rankings[players[0]].score, rankings[players[1]].score, decayK(set_final_K, CURRENT_YEAR, matchYear, TIME_DECAY_RATE), true);
 
         } else {
 
-          setRating = EloRating(rankings[players[0]].score, rankings[players[1]].score, SET_K, true);
+          setRating = EloRating(rankings[players[0]].score, rankings[players[1]].score, set_final_K, true);
 
         }
 
@@ -114,13 +135,13 @@ function CalcRankings(matchData, setBonus, decay) {
 
       } else {
         // P2 Wins the set
-        if (decay) {
+        if (timeDecay) {
           // modify for time decay
-          setRating = EloRating(rankings[players[0]].score, rankings[players[1]].score, decayK(SET_K, CURRENT_YEAR, matchYear), false);
+          setRating = EloRating(rankings[players[0]].score, rankings[players[1]].score, decayK(set_final_K, CURRENT_YEAR, matchYear, TIME_DECAY_RATE), false);
 
         } else {
 
-          setRating = EloRating(rankings[players[0]].score, rankings[players[1]].score, SET_K, false);
+          setRating = EloRating(rankings[players[0]].score, rankings[players[1]].score, set_final_K, false);
 
         }
 
@@ -144,7 +165,8 @@ function CalcRankings(matchData, setBonus, decay) {
       setWin: rankings[key].setWin,
       setLoss: rankings[key].setLoss,
       characterKey: rankings[key].characterKey,
-      playerKey: rankings[key].playerKey
+      playerKey: rankings[key].playerKey,
+      gamesPlayed: rankings[key].gamesPlayed
     });
   });
 
