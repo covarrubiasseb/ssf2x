@@ -1,18 +1,18 @@
 import SortDate from './SortDate.js';
 import EloRating from './ELO.js';
 
-const K = 192;
+const K = 48;
 const SET_MULTIPLIER = 2;
 const SET_K = K * SET_MULTIPLIER;
 const BASE_RATING = 1800;
 const CURRENT_YEAR = 2022;
-const TIME_DECAY_RATE = 0.8;
-const SLIDING_RATE = 0.98;
+const TIME_DECAY_RATE = 0.9;
+const SLIDING_RATE = 1.02;
 const SLIDING_GAME_COUNT = 5;
 
-function decayK(K, current, match, rate) {
+function decayK(K, current, start, rate) {
   let decay_K = K;
-  let diff = current - match;
+  let diff = current - start;
 
   for (let i = 0; i < diff; i++) {
     decay_K = Math.round(rate * decay_K);
@@ -72,13 +72,13 @@ function CalcRankings(matchData, setBonus, timeDecay, slidingK) {
       rankings[players[1]].gamesPlayed+=1;
 
       if (slidingK) {
-        if (rankings[players[0]].gamesPlayed > SLIDING_GAME_COUNT) {
-          final_K = decayK(final_K, rankings[players[0]].gamesPlayed, 0, SLIDING_RATE);
+        if (rankings[players[0]].gamesPlayed <= SLIDING_GAME_COUNT) {
+          final_K = decayK(final_K, SLIDING_GAME_COUNT - rankings[players[0]].gamesPlayed, 0, SLIDING_RATE);
           set_final_K = SET_MULTIPLIER * final_K;
         }
 
-        if (rankings[players[1]].gamesPlayed > SLIDING_GAME_COUNT) {
-          final_K = decayK(final_K, rankings[players[0]].gamesPlayed, 0, SLIDING_RATE);
+        if (rankings[players[1]].gamesPlayed <= SLIDING_GAME_COUNT) {
+          final_K = decayK(final_K, SLIDING_GAME_COUNT - rankings[players[1]].gamesPlayed, 0, SLIDING_RATE);
           set_final_K = SET_MULTIPLIER * final_K;
         }
       }
