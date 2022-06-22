@@ -27,12 +27,16 @@ const Player = (props) => {
   let winPercent = Math.round(data.state.win / (data.state.win + data.state.loss) * 100);
   let setWinPercent = Math.round(data.state.setWin / (data.state.setWin + data.state.setLoss) * 100);
 
+  let player = data.state.rankings.filter((player) => {
+    return data.state.playerKey === player.playerKey;
+  })[0];
+
   return (
     <div className="Player d-flex flex-column align-items-center text-black mt-5 mb-5">
       <div className="ms-5 me-5 mt-4 player-info bg-table text-center border border-dark border-2 shadow-lg">
         <div className="d-flex border-bottom border-dark mt-3 justify-content-center">
-          <img className="ms-1" src={"./img/"+data.state.characterKey+".png"} alt="character-icon"/>
-          <h1 className="ms-2 mt-auto display-4">{data.state.name}</h1>
+          <img className="ms-1" src={"./img/"+player.characterKey+".png"} alt="character-icon"/>
+          <h1 className="ms-2 mt-auto display-4">{player.name}</h1>
         </div>
 
         <table className="table table-dark text-white-50 border-secondary">
@@ -50,13 +54,13 @@ const Player = (props) => {
           </thead>
           <tbody>
             <tr>
-              <td>{data.state.rank}</td>
-              <td>{data.state.score}</td>
-              <td>{data.state.setWin}</td>
-              <td>{data.state.setLoss}</td>
+              <td>{player.rank}</td>
+              <td>{player.score}</td>
+              <td>{player.setWin}</td>
+              <td>{player.setLoss}</td>
               <td>{setWinPercent}</td>
-              <td>{data.state.win}</td>
-              <td>{data.state.loss}</td>
+              <td>{player.win}</td>
+              <td>{player.loss}</td>
               <td>{winPercent}</td>
             </tr>
           </tbody>
@@ -65,23 +69,23 @@ const Player = (props) => {
 
       <div className="player-info-responsive text-center text-white-50">
         <div className="d-flex mt-5 justify-content-center flex-row">
-          <img className="ms-1" src={"./img/"+data.state.characterKey+".png"} alt="character-icon"/>
-          <h1 className="ms-2 mt-auto display-6">{data.state.name}</h1>
+          <img className="ms-1" src={"./img/"+player.characterKey+".png"} alt="character-icon"/>
+          <h1 className="ms-2 mt-auto display-6">{player.name}</h1>
         </div>
 
         <div className="d-flex flex-row">
           <div className="w-50"><em>Rank</em></div>
-          <div className="w-50">{data.state.rank}</div>
+          <div className="w-50">{player.rank}</div>
         </div>
 
         <div className="d-flex flex-row">
           <div className="w-50"><em>W</em></div>
-          <div className="w-50">{data.state.win}</div>
+          <div className="w-50">{player.win}</div>
         </div>
 
         <div className="d-flex flex-row">
           <div className="w-50"><em>L</em></div>
-          <div className="w-50">{data.state.loss}</div>
+          <div className="w-50">{player.loss}</div>
         </div>
 
         <div className="d-flex flex-row">
@@ -91,7 +95,7 @@ const Player = (props) => {
 
         <div className="d-flex flex-row">
           <div className="w-50"><em>Rating</em></div>
-          <div className="w-50">{data.state.score}</div>
+          <div className="w-50">{player.score}</div>
         </div>   
       </div>
 
@@ -181,15 +185,7 @@ const Player = (props) => {
                         {
                           data: data.state.data,
                           rankings: data.state.rankings,
-                          name: otherPlayerData.name,
-                          score: otherPlayerData.score,
-                          rank: otherPlayerData.rank,
                           playerKey: otherPlayerData.playerKey,
-                          characterKey: otherPlayerData.characterKey,
-                          win: otherPlayerData.win,
-                          loss: otherPlayerData.loss,
-                          setWin: otherPlayerData.setWin,
-                          setLoss: otherPlayerData.setLoss
                         }
                       }>{isp1 ? playerB : playerA}</Link>
                       <img className="ps-2 img-fluid icon-responsive" 
@@ -208,16 +204,16 @@ const Player = (props) => {
                     </td>
                     <td className="result-responsive">
                       {
-                        previousRatings[length - idx] ? previousRatings[length - idx] : data.state.score
+                        previousRatings[length - idx] ? previousRatings[length - idx] : player.score
                       }
                       ({
                         previousRatings[length - idx] 
                           ? (previousRatings[length - idx] - previousRatings[length - (idx + 1)]) > 0
                             ? <span className="text-success">+{(previousRatings[length - idx] - previousRatings[length - (idx + 1)])}</span>
                             : <span className="text-danger">{(previousRatings[length - idx] - previousRatings[length - (idx + 1)])}</span>
-                          : (data.state.score - previousRatings[length - (idx + 1)]) > 0
-                            ? <span className="text-success">+{(data.state.score - previousRatings[length - (idx + 1)])}</span>
-                            : <span className="text-danger">{(data.state.score - previousRatings[length - (idx + 1)])}</span>
+                          : (player.score - previousRatings[length - (idx + 1)]) > 0
+                            ? <span className="text-success">+{(player.score - previousRatings[length - (idx + 1)])}</span>
+                            : <span className="text-danger">{(player.score - previousRatings[length - (idx + 1)])}</span>
                       })
                     </td>
                     <td>

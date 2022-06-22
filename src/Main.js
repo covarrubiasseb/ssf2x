@@ -79,15 +79,7 @@ class Main extends React.Component {
                           {
                             data: this.state.data,
                             rankings: this.state.rankings,
-                            name: player.name,
-                            score: player.score,
-                            rank: player.rank,
-                            playerKey: player.playerKey,
-                            characterKey: player.characterKey,
-                            win: player.win,
-                            loss: player.loss,
-                            setWin: player.setWin,
-                            setLoss: player.setLoss
+                            playerKey: player.playerKey
                           }
                         }>
                           <img className="img img-fluid icon-responsive" src={"./img/"+player.characterKey+".png"} alt="character icon"/>
