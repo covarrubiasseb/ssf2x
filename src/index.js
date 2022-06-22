@@ -7,7 +7,7 @@ import Player from './Player.js';
 import About from './About.js';
 
 import { BrowserRouter } from 'react-router-dom';
-import {Routes, Route, Navigate} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
